@@ -131,22 +131,31 @@ function print_left_menu(obj, cate, sub)
 
         // ------
         // Main String for Camera
-        obj.write("<li><a href='../html/setup_cam_title.htm'><span id='lang_MenuCamera'><img src='../images/images/dot_one.gif'>lang_MenuCamera</span></a></li>");
+        obj.write("<li><a href='../html/setup_cam_image.htm'><span id='lang_MenuCamera'><img src='../images/images/dot_one.gif'>lang_MenuCamera</span></a></li>");
         obj.write("<ul style=\"padding-left:20px;\">");
 
         // ------
         // Camera Sub Menus
-        if( (menuMask & 2048) == 0) {
+        // faslse is hiden some tab on menu
+        if( (menuMask & 2048) == 0 && false) {
           obj.write("<li "+ sub_s_11 + "><a href='../html/setup_cam_analog_type.htm'><span id='lang_MenuCamAnalogType'><img src='../images/images/dot_" + sub_i_11 + ".gif'>lang_MenuCamAnalogType</span></a></li>");
         }
 
         if( ((menuMask & 256) == 0 && INFO_CAMERA_INSTALL_MODE == '1' && SUPPORT_OPENMODE == '1') ||  patt.exec(INFO_MODEL) != null)
           obj.write("<li "+ sub_s_8 + "><a href='../Viewer.htm#setup/Camera/CameraInstallation'><span id='lang_MenuCamCamInst'><img src='../images/images/dot_" + sub_i_8 + ".gif'>lang_MenuCamCamInst</span></a></li>");
 
-        if( (menuMask & 1) == 0)
-          obj.write("<li "+ sub_s_0 + "><a href='../html/setup_cam_title.htm'><span id='lang_MenuCamTitle'><img src='../images/images/dot_" + sub_i_0 + ".gif'>lang_MenuCamTitle</span></a></li>");
+        // if( (menuMask & 1) == 0 && false)
+        //   obj.write("<li "+ sub_s_0 + "><a href='../html/setup_cam_title.htm'><span id='lang_MenuCamTitle'><img src='../images/images/dot_" + sub_i_0 + ".gif'>lang_MenuCamTitle</span></a></li>");
 
         // TODO image setup is dependant on DVR MODEL
+        if( (menuMask & 2) == 0 && false) {
+          if( INFO_MODEL.indexOf("IPX")  >= 0 ) {
+            obj.write("<li "+ sub_s_1 + "><a href='../html/setup_cam_compatibility.htm'><span id='lang_MenuCamCameraSetup'><img src='../images/images/dot_" + sub_i_1 + ".gif'>lang_MenuCamCameraSetup</span></a></li>");
+          } else {
+            obj.write("<li "+ sub_s_1 + "><a href='../html/setup_cam_image.htm'><span id='lang_MenuCamImage'><img src='../images/images/dot_" + sub_i_1 + ".gif'>lang_MenuCamImage</span></a></li>");
+          }
+        }
+        // image setup page
         if( (menuMask & 2) == 0) {
           if( INFO_MODEL.indexOf("IPX")  >= 0 ) {
             obj.write("<li "+ sub_s_1 + "><a href='../html/setup_cam_compatibility.htm'><span id='lang_MenuCamCameraSetup'><img src='../images/images/dot_" + sub_i_1 + ".gif'>lang_MenuCamCameraSetup</span></a></li>");
@@ -155,15 +164,15 @@ function print_left_menu(obj, cate, sub)
           }
         }
 
-        if( (menuMask & 4) == 0)
+        if( (menuMask & 4) == 0 && false)
           obj.write("<li "+ sub_s_2 + "><a href='../html/setup_cam_covert.htm'><span id='lang_MenuCamCovert'><img src='../images/images/dot_" + sub_i_2 + ".gif'>lang_MenuCamCovert</span></a></li>");
 
         // TODO motion setup is one of two
-        if( (menuMask & 8) == 0) {
-          obj.write("<li "+ sub_s_3 + "><a href='../html/setup_cam_motion.htm'><span id='lang_MenuCamMotion'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuCamMotion</span></a></li>");
-        } else {
-          obj.write("<li "+ sub_s_3 + "><a href='../html/setup_cam_motion_dvr.htm'><span id='lang_MenuCamMotion'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuCamMotion</span></a></li>");
-        }
+        // if( (menuMask & 8) == 0 && false) {
+        //   obj.write("<li "+ sub_s_3 + "><a href='../html/setup_cam_motion.htm'><span id='lang_MenuCamMotion'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuCamMotion</span></a></li>");
+        // } else {
+        //   obj.write("<li "+ sub_s_3 + "><a href='../html/setup_cam_motion_dvr.htm'><span id='lang_MenuCamMotion'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuCamMotion</span></a></li>");
+        // }
 
         if( (menuMask & 16) == 0) {
           obj.write("<li "+ sub_s_5 + "><a href='../html/setup_cam_type.htm'><span id='lang_MenuCamType'><img src='../images/images/dot_" + sub_i_5 + ".gif'>lang_MenuCamType</span></a></li>");
@@ -177,7 +186,7 @@ function print_left_menu(obj, cate, sub)
             obj.write("<li "+ sub_s_4 + "><a href='../html/setup_cam_ptz_ipx.htm'><span id='lang_MenuCamPTZ'><img src='../images/images/dot_" + sub_i_4 + ".gif'>lang_MenuCamPTZ</span></a></li>");
         }
 
-        if( (menuMask & 128) == 0 ) {
+        if( (menuMask & 128) == 0 && false) {
           obj.write("<li "+ sub_s_7 + "><a href='../html/setup_cam_privmask.htm'><span id='lang_MenuCamPrivMask'><img src='../images/images/dot_" + sub_i_7 + ".gif'>lang_MenuCamPrivMask</span></a></li>");
         }
 
@@ -220,11 +229,12 @@ function print_left_menu(obj, cate, sub)
         obj.write("</ul>");
     }
     else {
-        obj.write("<li><a href='../html/setup_cam_title.htm'><span id='lang_MenuCamera'><img src='../images/images/dot_some.gif'>lang_MenuCamera</span></a></li>");
+        obj.write("<li><a href='../html/setup_cam_image.htm'><span id='lang_MenuCamera'><img src='../images/images/dot_some.gif'>lang_MenuCamera</span></a></li>");
     }
 
     /* Category Display : sub-> OSD, Monitor*/
-    if( cate == "Display" ) {
+    // faslse is hiden some tab on menu
+    if( cate == "Display" && false) {
         if(sub == "OSD") { sub_s_0 = "class=\"on\""; sub_i_0 = "focus"; }
         if(sub == "Monitor") { sub_s_1 = "class=\"on\""; sub_i_1 = "focus"; }
         if(sub == "Sequence") { sub_s_2 = "class=\"on\""; sub_i_2 = "focus"; }
@@ -240,22 +250,22 @@ function print_left_menu(obj, cate, sub)
         //obj.write("<li "+ sub_s_4 + "><a href='../html/setup_display_hdspot.htm'><span id='lang_MenuDispHdSpot'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuDispHdSpot</span></a></li>");
         obj.write("</ul>");
     }
-    else {
-        obj.write("<li><a href='../html/setup_display_osd.htm'><span id='lang_MenuDisplay'><img src='../images/images/dot_some.gif'>lang_MenuDisplay</span></a></li>");
-    }
+    // else {
+    //     obj.write("<li><a href='../html/setup_display_osd.htm'><span id='lang_MenuDisplay'><img src='../images/images/dot_some.gif'>lang_MenuDisplay</span></a></li>");
+    // }
 
     /* Category Sound : sub-> Audio/Buzzer*/
-    if( cate == "Sound" ) {
-        if(sub == "Audio/Buzzer") { sub_s_0 = "class=\"on\""; sub_i_0 = "focus"; }
+    // if( cate == "Sound" &&) {
+    //     if(sub == "Audio/Buzzer") { sub_s_0 = "class=\"on\""; sub_i_0 = "focus"; }
 
-        obj.write("<li><a href='../html/setup_sound_audio.htm'><span id='lang_MenuAudio'><img src='../images/images/dot_one.gif'>lang_MenuAudio</span></a></li>");
-        obj.write("<ul style=\"padding-left:20px;\">");
-        obj.write("<li "+ sub_s_0 + "><a href='../html/setup_sound_audio.htm'><span id='lang_MenuSoundAudio'><img src='../images/images/dot_" + sub_i_0 + ".gif'>lang_MenuSoundAudio</span></a></li>");
-        obj.write("</ul>");
-    }
-    else {
-        obj.write("<li><a href='../html/setup_sound_audio.htm'><span id='lang_MenuAudio'><img src='../images/images/dot_some.gif'>lang_MenuAudio</span></a></li>");
-    }
+    //     obj.write("<li><a href='../html/setup_sound_audio.htm'><span id='lang_MenuAudio'><img src='../images/images/dot_one.gif'>lang_MenuAudio</span></a></li>");
+    //     obj.write("<ul style=\"padding-left:20px;\">");
+    //     obj.write("<li "+ sub_s_0 + "><a href='../html/setup_sound_audio.htm'><span id='lang_MenuSoundAudio'><img src='../images/images/dot_" + sub_i_0 + ".gif'>lang_MenuSoundAudio</span></a></li>");
+    //     obj.write("</ul>");
+    // }
+    // else {
+    //     obj.write("<li><a href='../html/setup_sound_audio.htm'><span id='lang_MenuAudio'><img src='../images/images/dot_some.gif'>lang_MenuAudio</span></a></li>");
+    // }
 
     /* Category User: sub-> User management, User authority, Log out */
     if( cate == "User" ) {
@@ -290,7 +300,7 @@ function print_left_menu(obj, cate, sub)
             || ((INFO_VENDOR == 'CBC') && (INFO_MODEL.indexOf("ANF")  >= 0 || INFO_MODEL.indexOf("ATM") >= 0 || INFO_MODEL.indexOf("UTM") >= 0))
             || (INFO_MODEL.indexOf("5G") >= 0 || INFO_MODEL.indexOf("5X") >= 0)
             || (INFO_MODEL.indexOf("5HG") >= 0))
-              && INFO_VENDOR.indexOf("KB_DEVICE") < 0 
+              && INFO_VENDOR.indexOf("KB_DEVICE") < 0
           ) {
           if(sub == "Security") { sub_s_4 = "class=\"on\""; sub_i_4 = "focus"; }
         }
@@ -322,7 +332,7 @@ function print_left_menu(obj, cate, sub)
                 || (INFO_VENDOR == 'CBC' && (INFO_MODEL.indexOf("ANF_") >= 0 || INFO_MODEL.indexOf("ATM_") >= 0 || INFO_MODEL.indexOf("UTM_") >= 0 ))
                 || (INFO_MODEL.indexOf("5G") >= 0 || INFO_MODEL.indexOf("5X") >= 0)
                 || (INFO_MODEL.indexOf("5HG") >= 0))
-                  && INFO_VENDOR.indexOf("KB_DEVICE") < 0 
+                  && INFO_VENDOR.indexOf("KB_DEVICE") < 0
               ) {
             obj.write("<li "+ sub_s_4 + "><a href='../html/setup_network_security.htm'><span id='lang_MenuNetSecurity'><img src='../images/images/dot_" + sub_i_4 + ".gif'>lang_MenuNetSecurity</span></a></li>");
           }
@@ -375,6 +385,7 @@ function print_left_menu(obj, cate, sub)
         if(sub == "System Management"  ) { sub_s_1 = "class=\"on\" "; sub_i_1 = "focus"; }
         if(sub == "System Information"  ) { sub_s_2 = "class=\"on\" "; sub_i_2 = "focus"; }
         if(sub == "Control device") { sub_s_3 = "class=\"on\""; sub_i_3 = "focus" }
+        if(sub == "Advanced settings") { sub_s_4 = "class=\"on\""; sub_i_4 = "focus" }
         //if(sub == "Text-in device") { sub_s_4 = "class=\"on\""; sub_i_4 = "focus" }
         if(_is_support_system_security() == true) {
           if(sub == "Security") { sub_s_5 = "class=\"on\""; sub_i_5 = "focus" }
@@ -385,6 +396,7 @@ function print_left_menu(obj, cate, sub)
         obj.write("<li " + sub_s_0 + "><a href='../html/setup_system_datetime.htm'><span id='lang_MenuSysDateTime'><img src='../images/images/dot_" + sub_i_0 + ".gif'>lang_MenuSysDateTime</span></a></li>");
         obj.write("<li " + sub_s_1 + "><a href='../html/setup_system_manage.htm'><span id='lang_MenuSysManagement'><img src='../images/images/dot_" + sub_i_1 + ".gif'>lang_MenuSysManagement</span></a></li>");
         obj.write("<li " + sub_s_2 + "><a href='../html/setup_system_info.htm'><span id='lang_MenuSysInformation'><img src='../images/images/dot_" + sub_i_2 + ".gif'>lang_MenuSysInformation</span></a></li>");
+        obj.write("<li " + sub_s_4 + "><a href='../html/setup_system_advancedsettings.htm'><span id='lang_MenuSysAdv'><img src='../images/images/dot_" + sub_i_4 + ".gif'>ADVANCED SETTINGS</span></a></li>");
         if( INFO_VENDOR!='ALSOK' && INFO_VENDOR != 'TAKENAKA') {
             obj.write("<li " + sub_s_3 + "><a href='../html/setup_system_control_dev.htm'><span id='lang_MenuSysControlDevice'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuSysControlDevice</span></a></li>");
         }
@@ -399,24 +411,22 @@ function print_left_menu(obj, cate, sub)
     }
 
     /* Category Storage: */
-    if(INFO_USE_VIDEO_ENCODER == false) {
-        if( cate == "Storage") {
-            if(sub == "Disk Information") { sub_s_0 = "class=\"on\""; sub_i_0 = "focus"; }
-            if(sub == "Disk Operation") { sub_s_1 = "class=\"on\""; sub_i_1 = "focus"; }
-            if(sub == "Disk Configuration") { sub_s_2 = "class=\"on\""; sub_i_2 = "focus"; }
-            if(sub == "SMART Setup") { sub_s_3 = "class=\"on\""; sub_i_3 = "focus"; }
+    // if( cate == "Storage") {
+    //     if(sub == "Disk Information") { sub_s_0 = "class=\"on\""; sub_i_0 = "focus"; }
+    //     if(sub == "Disk Operation") { sub_s_1 = "class=\"on\""; sub_i_1 = "focus"; }
+    //     if(sub == "Disk Configuration") { sub_s_2 = "class=\"on\""; sub_i_2 = "focus"; }
+    //     if(sub == "SMART Setup") { sub_s_3 = "class=\"on\""; sub_i_3 = "focus"; }
 
-            obj.write("<li><a href='../html/setup_storage_diskinfo.htm'><span id='lang_MenuStorage'><img src='../images/images/dot_some.gif'>lang_MenuStorage</span></a></li>");
-            obj.write("<ul style=\"padding-left:20px;\">");
-            obj.write("<li "+sub_s_0+"><a href='../html/setup_storage_diskinfo.htm' ><span id='lang_MenuStorageDiskinfo'><img src='../images/images/dot_"+sub_i_0+".gif'>lang_MenuStorageDiskinfo</span></a></li>");
-            obj.write("<li "+sub_s_1+"><a href='../html/setup_storage_diskop.htm'   ><span id='lang_MenuStorageDiskOP'><img src='../images/images/dot_"+sub_i_1+".gif'>lang_MenuStorageDiskOP</span></a></li>");
-            //obj.write("<li "+sub_s_2+"><a href='../html/setup_storage_diskconf.htm' ><span id='lang_MenuStorageDiskConf'><img src='../images/images/dot_"+sub_i_2+".gif'>lang_MenuStorageDiskConf</span></a></li>");
-            obj.write("<li "+sub_s_3+"><a href='../html/setup_storage_smart.htm'    ><span id='lang_MenuStorageSmart'><img src='../images/images/dot_"+sub_i_3+".gif'>lang_MenuStorageSmart</span></a></li>");
-            obj.write("</ul>");
-        } else {
-            obj.write("<li><a href='../html/setup_storage_diskinfo.htm'><span id='lang_MenuStorage'><img src='../images/images/dot_some.gif'>lang_MenuStorage</span></a></li>");
-        }
-    }
+    //     obj.write("<li><a href='../html/setup_storage_diskinfo.htm'><span id='lang_MenuStorage'><img src='../images/images/dot_some.gif'>lang_MenuStorage</span></a></li>");
+    //     obj.write("<ul style=\"padding-left:20px;\">");
+    //     obj.write("<li "+sub_s_0+"><a href='../html/setup_storage_diskinfo.htm' ><span id='lang_MenuStorageDiskinfo'><img src='../images/images/dot_"+sub_i_0+".gif'>lang_MenuStorageDiskinfo</span></a></li>");
+    //     obj.write("<li "+sub_s_1+"><a href='../html/setup_storage_diskop.htm'   ><span id='lang_MenuStorageDiskOP'><img src='../images/images/dot_"+sub_i_1+".gif'>lang_MenuStorageDiskOP</span></a></li>");
+    //     //obj.write("<li "+sub_s_2+"><a href='../html/setup_storage_diskconf.htm' ><span id='lang_MenuStorageDiskConf'><img src='../images/images/dot_"+sub_i_2+".gif'>lang_MenuStorageDiskConf</span></a></li>");
+    //     obj.write("<li "+sub_s_3+"><a href='../html/setup_storage_smart.htm'    ><span id='lang_MenuStorageSmart'><img src='../images/images/dot_"+sub_i_3+".gif'>lang_MenuStorageSmart</span></a></li>");
+    //     obj.write("</ul>");
+    // } else {
+    //     obj.write("<li><a href='../html/setup_storage_diskinfo.htm'><span id='lang_MenuStorage'><img src='../images/images/dot_some.gif'>lang_MenuStorage</span></a></li>");
+    // }
 
     /* Category Event: sub-> HDD event, Alarm input, Alarm output, Buzzer out, E-mail notification */
     if( cate == "Event" ) {
@@ -466,7 +476,10 @@ function print_left_menu(obj, cate, sub)
         if(sub == "System Event") { sub_s_6 = "class=\"on\""; sub_i_6 = "focus"; }
         //if(sub == "TEXT-IN Event") { sub_s_3 = "class=\"on\""; sub_i_3 = "focus"; }
 
-        if((menuMask & 8192) == 0)
+        if ((menuMask & 4096) == 0)
+        {
+            obj.write("<li><a href='../html/setup_event_alarm_sensor.htm'><span id='lang_MenuEventSensor'><img src='../images/images/dot_one.gif'>lang_MenuEventSensor</span></a></li>");
+        }else if((menuMask & 8192) == 0)
         {
           obj.write("<li><a href='../html/setup_event_alarm_output.htm'><span id='lang_MenuEventSensor'><img src='../images/images/dot_one.gif'>lang_MenuEventSensor</span></a></li>");
         }
@@ -477,20 +490,22 @@ function print_left_menu(obj, cate, sub)
 
         obj.write("<ul style=\"padding-left:20px;\">");
 
+        if ((menuMask & 4096) == 0) {
+            obj.write("<li " + sub_s_2 + "><a href='../html/setup_event_alarm_sensor.htm'><span id='lang_MenuAlarmsensor'><img src='../images/images/dot_" + sub_i_2 + ".gif'>lang_MenuAlarmsensor</span></a></li>");
+        }
+
         if((menuMask & 8192) == 0)
         {
           obj.write("<li "+sub_s_0+"><a href='../html/setup_event_alarm_output.htm'><span id='lang_MenuAlarmoutput'><img src='../images/images/dot_"+sub_i_0+".gif'>lang_MenuAlarmoutput</span></a></li>");
         }
 
-        obj.write("<li "+sub_s_1+"><a href='../html/setup_event_noti.htm'><span id='lang_MenuNotification'><img src='../images/images/dot_"+sub_i_1+".gif'>lang_MenuNotification</span></a></li>");
+        obj.write("<li " + sub_s_4 + "><a href='../html/setup_event_video_loss.htm'><span id='lang_MenuVideoloss'><img src='../images/images/dot_" + sub_i_4 + ".gif'>lang_MenuVideoloss</span></a></li>");
 
-        if((menuMask & 4096) == 0)
-        {
-          obj.write("<li "+sub_s_2+"><a href='../html/setup_event_alarm_sensor.htm'><span id='lang_MenuAlarmsensor'><img src='../images/images/dot_"+sub_i_2+".gif'>lang_MenuAlarmsensor</span></a></li>");
-        }
+        obj.write("<li " + sub_s_6 + "><a href='../html/setup_event_system_event.htm'><span id='lang_MenuSysevent'><img src='../images/images/dot_" + sub_i_6 + ".gif'>lang_MenuSysevent</span></a></li>");
 
-        obj.write("<li "+sub_s_3+"><a href='../html/setup_event_motion_sensor.htm'><span id='lang_MenuMotionsensor'><img src='../images/images/dot_"+sub_i_3+".gif'>lang_MenuMotionsensor</span></a></li>");
-        obj.write("<li "+sub_s_4+"><a href='../html/setup_event_video_loss.htm'><span id='lang_MenuVideoloss'><img src='../images/images/dot_"+sub_i_4+".gif'>lang_MenuVideoloss</span></a></li>");
+        obj.write("<li " + sub_s_1 + "><a href='../html/setup_event_noti.htm'><span id='lang_MenuNotification'><img src='../images/images/dot_" + sub_i_1 + ".gif'>lang_MenuNotification</span></a></li>");
+
+        // obj.write("<li "+sub_s_3+"><a href='../html/setup_event_motion_sensor.htm'><span id='lang_MenuMotionsensor'><img src='../images/images/dot_"+sub_i_3+".gif'>lang_MenuMotionsensor</span></a></li>");
 
         if( (menuMask & 64) == 0) {
           $.ajax({
@@ -511,8 +526,6 @@ function print_left_menu(obj, cate, sub)
           });
         }
 
-
-        obj.write("<li "+sub_s_6+"><a href='../html/setup_event_system_event.htm'><span id='lang_MenuSysevent'><img src='../images/images/dot_"+sub_i_6+".gif'>lang_MenuSysevent</span></a></li>");
         //obj.write("<li "+sub_s_6+"><a href='../html/setup_event_text_in.htm'><span id='lang_MenuTextin'><img src='../images/images/dot_"+sub_i_6+".gif'>lang_MenuTextin</span></a></li>");
 
         if( (menuMask & 32) == 0 ) {
@@ -523,7 +536,7 @@ function print_left_menu(obj, cate, sub)
     }
     else {
         if( (typeof(INFO_ALARM_SENSOR) != 'undefined') && (INFO_ALARM_SENSOR.aout_dvr != 0)) {
-          obj.write("<li><a href='../html/setup_event_alarm_output.htm'><span id='lang_MenuEventSensor'><img src='../images/images/dot_some.gif'>lang_MenuEventSensor</span></a></li>");
+            obj.write("<li><a href='../html/setup_event_alarm_sensor.htm'><span id='lang_MenuEventSensor'><img src='../images/images/dot_some.gif'>lang_MenuEventSensor</span></a></li>");
         }
         else {
           obj.write("<li><a href='../html/setup_event_noti.htm'><span id='lang_MenuEventSensor'><img src='../images/images/dot_some.gif'>lang_MenuEventSensor</span></a></li>");
@@ -531,70 +544,55 @@ function print_left_menu(obj, cate, sub)
     }
 
     /* Category Record: sub-> Recording operation, Continuous / Motion recording, Alarm recording, Panic recording */
-    if( cate == "Record" ) {
-        var menuMask = 0;
+    // if( cate == "Record" ) {
+    //     var menuMask = 0;
 
-        if( INFO_MODEL.indexOf("IPX") >= 0 ) {
-          menuMask = 32;
-        } else if( INFO_MODEL.indexOf("HDI") >= 0 ) {
-          menuMask = 32;
-        } else if( INFO_MODEL.indexOf("HDY") >= 0 ) {
-        } else if( INFO_MODEL.indexOf("ANF") >= 0 ) {
-        } else if( INFO_MODEL.indexOf("ATM") >= 0 ) {
-        } else if ( INFO_MODEL.indexOf("HDS") >= 0) {
-        } else if ( INFO_MODEL.indexOf("UTM") >= 0) {
-        }
+    //     if( INFO_MODEL.indexOf("IPX") >= 0 ) {
+    //       menuMask = 32;
+    //     } else if( INFO_MODEL.indexOf("HDI") >= 0 ) {
+    //       menuMask = 32;
+    //     } else if( INFO_MODEL.indexOf("HDY") >= 0 ) {
+    //     } else if( INFO_MODEL.indexOf("ANF") >= 0 ) {
+    //     } else if( INFO_MODEL.indexOf("ATM") >= 0 ) {
+    //     } else if ( INFO_MODEL.indexOf("HDS") >= 0) {
+    //     } else if ( INFO_MODEL.indexOf("UTM") >= 0) {
+    //     }
 
-        if( (typeof(INFO_ALARM_SENSOR) != 'undefined') && (INFO_ALARM_SENSOR.aout_dvr == 0) ) {
-          menuMask |= 8192; //not support alarm out.
-        }
+    //     if( (typeof(INFO_ALARM_SENSOR) != 'undefined') && (INFO_ALARM_SENSOR.aout_dvr == 0) ) {
+    //       menuMask |= 8192; //not support alarm out.
+    //     }
 
-        if(sub == "Recording operation") { sub_s_0 = "class=\"on\""; sub_i_0 = "focus"; }
-        if(sub == "Continuous recording") { sub_s_1 = "class=\"on\""; sub_i_1 = "focus"; }
-        if(sub == "Motion recording") { sub_s_2 = "class=\"on\" style=\"letter-spacing:-0.1em\"  "; sub_i_2 = "focus"; }
-        if(sub == "Alarm recording") { sub_s_3 = "class=\"on\""; sub_i_3 = "focus"; }
-        if(sub == "Panic recording") { sub_s_4 = "class=\"on\""; sub_i_4 = "focus"; }
-        if(sub == "NetStreaming recording") { sub_s_5 = "class=\"on\"  "; sub_i_5 = "focus"; }
-        if(sub == "Audio Mapping") { sub_s_6 = "class=\"on\"  "; sub_i_6 = "focus"; }
-        // if(sub == "Video Record Setup") { sub_s_7 = "class=\"on\"  "; sub_i_7 = "focus"; }
+    //     if(sub == "Recording operation") { sub_s_0 = "class=\"on\""; sub_i_0 = "focus"; }
+    //     if(sub == "Continuous recording") { sub_s_1 = "class=\"on\""; sub_i_1 = "focus"; }
+    //     if(sub == "Motion recording") { sub_s_2 = "class=\"on\" style=\"letter-spacing:-0.1em\"  "; sub_i_2 = "focus"; }
+    //     if(sub == "Alarm recording") { sub_s_3 = "class=\"on\""; sub_i_3 = "focus"; }
+    //     if(sub == "Panic recording") { sub_s_4 = "class=\"on\""; sub_i_4 = "focus"; }
+    //     if(sub == "NetStreaming recording") { sub_s_5 = "class=\"on\"  "; sub_i_5 = "focus"; }
+    //     if(sub == "Audio Mapping") { sub_s_6 = "class=\"on\"  "; sub_i_6 = "focus"; }
 
+    //     obj.write("<li><a href='../html/setup_record_operation.htm'><span id='lang_MenuRecord'><img src='../images/images/dot_one.gif'>lang_MenuRecord</span></a></li>");
+    //     obj.write("<ul style=\"padding-left:20px;\">");
+    //     obj.write("<li " + sub_s_0 + "><a href='../html/setup_record_operation.htm'><span id='lang_MenuRecRecordingoperation'><img src='../images/images/dot_" + sub_i_0 + ".gif'>lang_MenuRecRecordingoperation</span></a></li>");
+    //     obj.write("<li " + sub_s_1 + "class=\"manual-rec\" ><a href='../html/setup_record_continuous.htm'><span id='lang_MenuRecContinuousRecording'><img src='../images/images/dot_" + sub_i_1 + ".gif'>lang_MenuRecContinuousRecording</span></a></li>");
+    //     obj.write("<li " + sub_s_2 + "class=\"manual-rec\" ><a href='../html/setup_record_motion.htm'><span id='lang_MenuRecMotionRecording'><img src='../images/images/dot_" + sub_i_2 + ".gif'>lang_MenuRecMotionRecording</span></a></li>");
 
-        if(INFO_USE_VIDEO_ENCODER == false) {
-            obj.write("<li><a href='../html/setup_record_operation.htm'><span id='lang_MenuRecord'><img src='../images/images/dot_one.gif'>lang_MenuRecord</span></a></li>");
-            obj.write("<ul style=\"padding-left:20px;\">");
-            obj.write("<li " + sub_s_0 + "><a href='../html/setup_record_operation.htm'><span id='lang_MenuRecRecordingoperation'><img src='../images/images/dot_" + sub_i_0 + ".gif'>lang_MenuRecRecordingoperation</span></a></li>");
-            obj.write("<li " + sub_s_1 + "class=\"manual-rec\" ><a href='../html/setup_record_continuous.htm'><span id='lang_MenuRecContinuousRecording'><img src='../images/images/dot_" + sub_i_1 + ".gif'>lang_MenuRecContinuousRecording</span></a></li>");
-            obj.write("<li " + sub_s_2 + "class=\"manual-rec\" ><a href='../html/setup_record_motion.htm'><span id='lang_MenuRecMotionRecording'><img src='../images/images/dot_" + sub_i_2 + ".gif'>lang_MenuRecMotionRecording</span></a></li>");
+    //     if( (typeof(INFO_ALARM_SENSOR) != 'undefined') && (INFO_ALARM_SENSOR.aout_dvr != 0)) {
+    //       obj.write("<li " + sub_s_3 + "class=\"manual-rec\" ><a href='../html/setup_record_alarm.htm'><span id='lang_MenuRecAlarmrecording'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuRecAlarmrecording</span></a></li>");
+    //     } else {
+    //     }
 
-            if( (typeof(INFO_ALARM_SENSOR) != 'undefined') && (INFO_ALARM_SENSOR.aout_dvr != 0)) {
-                obj.write("<li " + sub_s_3 + "class=\"manual-rec\" ><a href='../html/setup_record_alarm.htm'><span id='lang_MenuRecAlarmrecording'><img src='../images/images/dot_" + sub_i_3 + ".gif'>lang_MenuRecAlarmrecording</span></a></li>");
-            } else {
-            }
+    //     obj.write("<li " + sub_s_4 + "><a href='../html/setup_record_panic.htm'><span id='lang_MenuRecPanicrecording'><img src='../images/images/dot_" + sub_i_4 + ".gif'>lang_MenuRecPanicrecording</span></a></li>");
+    //     obj.write("<li " + sub_s_5 + "class=\"big\"><a href='../html/setup_record_netstreaming.htm'><span id='lang_MenuRecNetStreaming'><img src='../images/images/dot_" + sub_i_5 + ".gif'>lang_MenuRecNetStreaming</span></a></li>");
 
-            obj.write("<li " + sub_s_4 + "><a href='../html/setup_record_panic.htm'><span id='lang_MenuRecPanicrecording'><img src='../images/images/dot_" + sub_i_4 + ".gif'>lang_MenuRecPanicrecording</span></a></li>");
-        }
-        else {
-            obj.write("<li><a href='../html/setup_record_continuous.htm'><span id='lang_MenuRecord'><img src='../images/images/dot_one.gif'>lang_MenuRecord</span></a></li>");
-            obj.write("<ul style=\"padding-left:20px;\">");
-            obj.write("<li " + sub_s_1 + "class=\"big\"><a href='../html/setup_record_continuous.htm'><span><img src='../images/images/dot_" + sub_i_1 + ".gif'>VIDEO SETUP</span></a></li>");
-        }
-        obj.write("<li " + sub_s_5 + "class=\"big\"><a href='../html/setup_record_netstreaming.htm'><span id='lang_MenuRecNetStreaming'><img src='../images/images/dot_" + sub_i_5 + ".gif'>lang_MenuRecNetStreaming</span></a></li>");
+    //     if( (menuMask & 32) == 0 ) {
+    //       obj.write("<li " + sub_s_6 + "class=\"big\"><a href='../html/setup_record_audio_mapping.htm'><span id='lang_MenuRecAudioMapping'><img src='../images/images/dot_" + sub_i_6 + ".gif'>lang_MenuRecAudioMapping</span></a></li>");
+    //     }
 
-        if( (menuMask & 32) == 0 ) {
-            
-          obj.write("<li " + sub_s_6 + "class=\"big\"><a href='../html/setup_record_audio_mapping.htm'><span id='lang_MenuRecAudioMapping'><img src='../images/images/dot_" + sub_i_6 + ".gif'>lang_MenuRecAudioMapping</span></a></li>");
-        }
-
-        obj.write("</ul>");
-    }
-    else {
-        if(INFO_USE_VIDEO_ENCODER == false) {
-            obj.write("<li><a href='../html/setup_record_operation.htm'><span id='lang_MenuRecord'><img src='../images/images/dot_some.gif'>lang_MenuRecord</span></a></li>");
-        }
-        else {
-            obj.write("<li><a href='../html/setup_record_continuous.htm'><span id='lang_MenuRecord'><img src='../images/images/dot_some.gif'>lang_MenuRecord</span></a></li>");
-        }
-    }
+    //     obj.write("</ul>");
+    // }
+    // else {
+    //     obj.write("<li><a href='../html/setup_record_operation.htm'><span id='lang_MenuRecord'><img src='../images/images/dot_some.gif'>lang_MenuRecord</span></a></li>");
+    // }
 
 
     /*	obj.write("<br><br><table class='c_sp_tb_verinfo'><tr><td class='tdinfo'><div onClick='infomationopen()'>Infomation</div></td></tr></table>"); */

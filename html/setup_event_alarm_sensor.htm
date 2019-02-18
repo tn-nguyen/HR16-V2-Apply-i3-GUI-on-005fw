@@ -27,8 +27,7 @@
 
     <script type="text/javascript">
     passwordRenewCheck();
-    language_include();
-    global_entry_init();
+      language_include();
     </script>
 
     <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
@@ -60,7 +59,7 @@
         </div>
         <div id="c_sp_div_contents">
           <form action="/cgi-bin/webra_fcgi.fcgi" name="eventsetting_alarm_input" id="eventsetting_alarm_input">
-            <div class="c_sp_div_frame">
+            <div class="c_sp_div_frame" id="sensor_table">
               <h2><span id='lang_AlarmSensorsetting'>Alarm Sensor setting</span></h2>
               <table class="event event_sensor">
                 <colgroup>
@@ -75,8 +74,8 @@
                   <col class="col5"/>
                   <col class="col6"/>
                   <col class="col7"/>
-                  <col class="col8 event_recoder"/>
-                  <col class="col9 event_recoder"/>
+                  <col class="col8"/>
+                  <col class="col9"/>
                   <col class="col10"/>
                   <col class="col11"/>
                   <col class="col12"/>
@@ -87,9 +86,9 @@
                   <tr>
                     <th></th>
                     <th colspan="2" scope='colgroup'>
-                      <span id='lang_parameter'>Event Parameter</span>
+                      <!-- <span id='lang_parameter'>Event Parameter</span> -->
                     </th>
-                    <th colspan="8" scope='colgroup' class="colspan">
+                    <th colspan="10" scope='colgroup' class="colspan">
                       <span id='lang_action'>Action</span>
                     </th>
                   </tr>
@@ -111,16 +110,16 @@
                     <th>
                       <span id='lang_alarmout'>Alarm Out</span>
                     </th>
-                    <th class="small">
+                    <th class="small" >
                       <span id='lang_ptzpreset'>PTZ Preset</span>
                     </th>
                     <th class="small">
                       <span id='lang_buzzer'>Buzzer</span>
                     </th>
-                    <th class="small event_recoder">
+                    <th class="small">
                       <span id='lang_vpopup'>Video</span>
                     </th>
-                    <th class="small event_recoder">
+                    <th class="small">
                       <span id='lang_opopup'>OSD</span>
                     </th>
                     <th class="small">
@@ -160,10 +159,10 @@
                     <th>
                       <input type="checkbox" id="buzzer_all">
                     </th>
-                    <th class="event_recoder">
+                    <th>
                       <input type="checkbox" id="vpopup_all">
                     </th>
-                    <th class="event_recoder">
+                    <th>
                       <input type="checkbox" id="opopup_all">
                     </th>
                     <th>
@@ -209,10 +208,10 @@
                     <td>
                       <input type="checkbox" name="buzzer0" id="buzzer0">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup0" id="vpopup0">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup0" id="opopup0">
                     </td>
                     <td>
@@ -256,10 +255,10 @@
                     <td>
                       <input type="checkbox" name="buzzer1" id="buzzer1">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup1" id="vpopup1">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup1" id="opopup1">
                     </td>
                     <td>
@@ -301,10 +300,10 @@
                     <td>
                       <input type="checkbox" name="buzzer2" id="buzzer2">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup2" id="vpopup2">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup2" id="opopup2">
                     </td>
                     <td>
@@ -346,10 +345,10 @@
                     <td>
                       <input type="checkbox" name="buzzer3" id="buzzer3">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup3" id="vpopup3">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup3" id="opopup3">
                     </td>
                     <td>
@@ -391,10 +390,10 @@
                     <td>
                       <input type="checkbox" name="buzzer4" id="buzzer4">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup4" id="vpopup4">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup4" id="opopup4">
                     </td>
                     <td>
@@ -436,10 +435,10 @@
                     <td>
                       <input type="checkbox" name="buzzer5" id="buzzer5">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup5" id="vpopup5">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup5" id="opopup5">
                     </td>
                     <td>
@@ -481,10 +480,10 @@
                     <td>
                       <input type="checkbox" name="buzzer6" id="buzzer6">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup6" id="vpopup6">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup6" id="opopup6">
                     </td>
                     <td>
@@ -526,10 +525,10 @@
                     <td>
                       <input type="checkbox" name="buzzer7" id="buzzer7">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup7" id="vpopup7">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup7" id="opopup7">
                     </td>
                     <td>
@@ -571,10 +570,10 @@
                     <td>
                       <input type="checkbox" name="buzzer8" id="buzzer8">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup8" id="vpopup8">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup8" id="opopup8">
                     </td>
                     <td>
@@ -616,10 +615,10 @@
                     <td>
                       <input type="checkbox" name="buzzer9" id="buzzer9">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup9" id="vpopup9">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup9" id="opopup9">
                     </td>
                     <td>
@@ -661,10 +660,10 @@
                     <td>
                       <input type="checkbox" name="buzzer10" id="buzzer10">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup10" id="vpopup10">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup10" id="opopup10">
                     </td>
                     <td>
@@ -707,10 +706,10 @@
                     <td>
                       <input type="checkbox" name="buzzer11" id="buzzer11">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup11" id="vpopup11">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup11" id="opopup11">
                     </td>
                     <td>
@@ -752,10 +751,10 @@
                     <td>
                       <input type="checkbox" name="buzzer12" id="buzzer12">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup12" id="vpopup12">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup12" id="opopup12">
                     </td>
                     <td>
@@ -797,10 +796,10 @@
                     <td>
                       <input type="checkbox" name="buzzer13" id="buzzer13">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup13" id="vpopup13">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup13" id="opopup13">
                     </td>
                     <td>
@@ -842,10 +841,10 @@
                     <td>
                       <input type="checkbox" name="buzzer14" id="buzzer14">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup14" id="vpopup14">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup14" id="opopup14">
                     </td>
                     <td>
@@ -887,10 +886,10 @@
                     <td>
                       <input type="checkbox" name="buzzer15" id="buzzer15">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup15" id="vpopup15">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup15" id="opopup15">
                     </td>
                     <td>
@@ -932,10 +931,10 @@
                     <td>
                       <input type="checkbox" name="buzzer16" id="buzzer16">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup16" id="vpopup16">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup16" id="opopup16">
                     </td>
                     <td>
@@ -977,10 +976,10 @@
                     <td>
                       <input type="checkbox" name="buzzer17" id="buzzer17">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup17" id="vpopup17">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup17" id="opopup17">
                     </td>
                     <td>
@@ -1022,10 +1021,10 @@
                     <td>
                       <input type="checkbox" name="buzzer18" id="buzzer18">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup18" id="vpopup18">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup18" id="opopup18">
                     </td>
                     <td>
@@ -1067,10 +1066,10 @@
                     <td>
                       <input type="checkbox" name="buzzer19" id="buzzer19">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="vpopup19" id="vpopup19">
                     </td>
-                    <td class="event_recoder">
+                    <td>
                       <input type="checkbox" name="opopup19" id="opopup19">
                     </td>
                     <td>

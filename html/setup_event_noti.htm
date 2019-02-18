@@ -19,8 +19,7 @@
     <script type="text/javascript" src="../scripts/libs/json3.min.js"></script>
     <script type="text/javascript">
       passwordRenewCheck();
-      language_include();
-      global_entry_init();
+        language_include();
     </script>
     <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
     <script src="../scripts/jquery/jquery-1.6.1.js"></script>
@@ -49,7 +48,7 @@
               <div id="event_tabs">
                 <ul>
                   <li><a href="#fragment-buzzer"><span id="lang_Buzzeroutsetting">BUZZER</span></a></li>
-                  <li class='video_recoder'><a href="#fragment-disp"><span id="lang_disp">DISPLAY</span></a></li>
+                  <li style="display:none;"><a href="#fragment-disp"><span id="lang_disp">DISPLAY</span></a></li>
                   <li><a href="#fragment-email"><span id="lang_email">EMAIL</span></a></li>
                   <li class='ftp remove_alsok'><a href="#fragment-ftp"><span id="lang_ftp">FTP</span></a></li>
                   <li class='mobilepush'><a href="#fragment-push"><span id="lang_push">MOBILE PUSH</span></a></li>
@@ -73,7 +72,7 @@
                           <option value="120">120 SEC</option>
                           <option value="180">180 SEC</option>
                           <option value="300">300 SEC</option>
-                          <option value="9999">UNTIL KEY</option>
+                          <!-- <option value="9999">UNTIL KEY</option> -->
                         </select>
                       </dd>
                     </dl>
@@ -154,6 +153,7 @@
                   <h2><span id='lang_emailnoti'>E-mail notification setting</span></h2>
                   <div class="container">
                     <dl>
+                      <div class="email_no_line1">
                       <dt>
                         <span class="list">
                           <span id='lang_Add_Email'>Add New E-Mail</span>
@@ -162,6 +162,8 @@
                       <dd>
                         <input type="button" id='email_list_open' value="ADD_EDIT" class="lstbut"/>
                       </dd>
+                    </div>
+                    <div class="email_no_line2">
                       <dt class="fragment-email_server">
                         <span class="list"><span id='lang_Email_Server'>EMAIL SERVER</span></span>
                       </dt>
@@ -169,6 +171,8 @@
                         <input type="radio" id="email_serv" name="email_serv" value="0">1
                         <input type="radio" id="email_serv" name="email_serv" value="1">2
                       </dd>
+                    </div>
+                    <div class="email_no_line3">
                       <dt>
                         <span class="list">
                           <span id='lang_mail_freq'>Minimum E-Mail Frequency</span>
@@ -185,12 +189,15 @@
                           <option value="60">60 MIN</option>
                         </select>
                       </dd>
+                    </div>
+                    <div class="email_no_line4">
                       <dt>
                         <span id='lang_include_snapshot_image'>INCLUDE SNAPSHOT IMAGE</span>
                       </dt>
                       <dd>
                         <input type="checkbox" name="email_jpeg" id="email_jpeg"/>
                       </dd>
+                    </div>
                     </dl>
                     <dl id="physical_switch">
                       <dt>
@@ -758,6 +765,7 @@
                   <h2><span id='lang_ftpnotification'>FTP NOTIFICATION</span></h2>
                   <div class="container">
                     <dl>
+                      <div class="ftp_line1">
                       <dt>
                         <span class="list">
                           <span id='lang_ftpserver'>FTP SERVER</span>
@@ -766,6 +774,8 @@
                       <dd>
                         <input type='button' id="button_ftpserver_edit" name="button_ftpserver_edit" value='EDIT' class="lstbut" />
                       </dd>
+                    </div>
+                    <div class="ftp_line2">
                       <dt>
                         <span class="list">
                           <span id='lang_directory'>DIRECTORY</span>
@@ -775,11 +785,13 @@
                         <select id="ftp_dir_mode" name="ftp_dir_mode" class="lstdisp" >
                           <option value='0'>MANUAL</option>
                           <option value='1'>MANUAL_DATE</option>
-                          <option value='2'>SYSTEM ID</option>
-                          <option value='3'>SYSTEM ID_DATE</option>
+                          <option value='2'>DEVICE NAME</option>
+                          <option value='3'>DEVICE NAME_DATE</option>
                         </select>
                         <input type='text' id="ftp_dir_path" name="ftp_dir_path" class="lsttxt" maxlength="31"/>
                       </dd>
+                    </div>
+                    <div class="ftp_line3">
                       <dt>
                         <span class="list">
                           <span id='lang_file_name'>FILE NAME</span>
@@ -789,12 +801,14 @@
                         <select id="ftp_fname_mode" name="ftp_fname_mode" class="lstdisp" >
                           <option value='0'>MANUAL</option>
                           <option value='1'>MANUAL_DATE_TIME</option>
-                          <option value='2'>SYSTEM ID</option>
-                          <option value='3'>SYSTEM ID_DATE_TIME</option>
+                          <option value='2'>DEVICE NAME</option>
+                          <option value='3'>DEVICE NAME_DATE_TIME</option>
                         </select>
                         <input type='text' id="ftp_fname_prefix" name="ftp_fname_prefix" class="lsttxt" maxlength="31"/>
                       </dd>
+                    </div>
                       <br/>
+                      <div class="ftp_line4">
                       <dt>
                         <span class="list">
                           <span id='lang_minimum_frequency'>MINIMUM FREQUENCY</span>
@@ -810,6 +824,8 @@
                           <option value='60'>60 MIN</option>
                         </select>
                       </dd>
+                    </div>
+                    <div class="ftp_line5">
                       <dt>
                         <span class="list">
                           <span id='lang_webra_link'>INCLUDE WEBRA LINK</span>
@@ -818,6 +834,8 @@
                       <dd>
                         <input type="checkbox" name="ftp_weblink" id="ftp_weblink"/>
                       </dd>
+                    </div>
+                    <div class="ftp_line6">
                       <dt>
                         <span class="list">
                           <span id='lang_include_snapshot_image'>INCLUDE SNAPSHOT IMAGE</span>
@@ -826,6 +844,7 @@
                       <dd>
                         <input type="checkbox" name="ftp_jpeg" id="ftp_jpeg"/>
                       </dd>
+                    </div>
                     </dl>
                     <input id="btn_help" type="button" value="HELP"></input>
                   </div>

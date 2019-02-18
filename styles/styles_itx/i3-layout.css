@@ -9,9 +9,9 @@ body {
 
 #c_g_div_tab {
     float: left;
-    width:500px;
+    width:437px;
     position: static;
-    margin-left: 0px;
+    margin-left: 142px;
 }
 
     #c_g_div_tab ul {
@@ -68,6 +68,8 @@ body {
 }
 
 #c_g_div_logo img {
+    margin-left: -48px;
+    margin-top: 4px;
     width: 230px;
     height: 52px;
 }
@@ -103,7 +105,7 @@ body {
 
 #c_l_div_toolbar {
     width: 984px;
-    margin: -1px 135px auto 1px;
+    margin: -60px 135px auto 1px;
     height: 41px;
 }
 
@@ -120,7 +122,7 @@ body {
         background-color: rgb(68, 68, 68);
         border-radius: 3px;
         margin-top: 3px;
-        margin-left: 40px;
+        margin-left: 370px;
         margin-right: 0px !important;
     }
 
@@ -132,6 +134,7 @@ body {
     }
 
     #c_l_div_toolbar ul.btn4 {
+        display: none;
         margin-right: 70px !important;
         width: 75px !important;
         height: 35px !important;
@@ -139,10 +142,10 @@ body {
 
     }
     #c_l_div_toolbar ul.btn3 {
-        width: 145px !important;
+        width: 35px !important;
         height: 35px !important;
         margin-top: 2px;
-        margin-left: 85px;
+        margin-left: 20px;
     }
 
 *.c_l_tb_status td {
@@ -250,8 +253,8 @@ body {
     width: 35px;
 }
     #c_l_div_toolbar li.divided img {
-        width: 35px;
-        height: 35px;
+        width: 34px;
+        height: 34px;
     }
 
 #c_l_div_ptz_contents table.c_l_tb_pantilt {
@@ -518,3 +521,72 @@ body {
   padding-left: 12px;
 }
 /*END Nguyen 20171102*/
+
+/*--- START LOGIN PAGE ---*/
+.login_table span {
+    font-size: 14px;
+    color: #eee;
+    margin-bottom: 9px;
+}
+.login_table th {
+    width: 40%;
+}
+.login_send input {
+    width: 185px;
+    margin-right: -1px;
+    margin-top: 9px;
+}
+.login_table td input {
+    margin-bottom: 10px;
+}
+.login_copy_right {
+    margin-top: 80px;
+    text-align: center;
+}
+    .login_copy_right span {
+        font-size: 14px;
+        color: #757575;
+    }
+
+#login_first_login {
+    margin-top: -130px;
+}
+#login_first_login .note {
+    text-align: left;
+    margin-top: 50px;
+}
+    #login_first_login .note-title {
+        font-weight: 600;
+        color: #fff;
+        font-size: 16px;
+        margin-top: 14px;
+    }
+    #login_first_login .note-content {
+        color: #BDBDBD;
+        font-size: 14px;
+        margin-top: 0px;
+        white-space: pre-line;
+        line-height: 24px;
+    }
+    #login_first_login .login_first_login_table {
+        margin-top: 30px;
+    }
+    #login_first_login .login_first_login_table th {
+        text-align: left;
+    }
+    #login_first_login .login_first_login_table th span {
+        font-size: 14px;
+        color: #eee;
+    }
+    #login_first_login .login_first_login_table td input {
+         width: 186px;
+        margin-left: 14px;
+    }
+    #login_first_login .login_first_login_table_buttons {
+        margin-top: 16px;
+    }
+    #login_first_login .login_first_login_table_buttons input[type=button] {
+        width: 190px;
+        height: 20px;
+    }
+/*--- END LOGIN PAGE ---*/

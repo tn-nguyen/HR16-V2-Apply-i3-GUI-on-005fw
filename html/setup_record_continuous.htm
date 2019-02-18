@@ -27,9 +27,7 @@
 
     <script type="text/javascript">
     passwordRenewCheck();
-    language_include();
-    global_entry_init();
-    </script>
+    language_include()</script>
 
     <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../scripts/jquery/jquery-1.6.1.js"></script>
@@ -55,7 +53,7 @@
           <div class="c_sp_div_frame c_sp_div_frame_dot">
             <h2><span id='lang_Continusousrecordingsetting'>Continusous recording setting</span></h2>
             <div id="rec_tabs">
-              <ul hidden>
+              <ul>
                 <li><a href='#rec_tab_param'><span id='lang_RecParam'>Parameters</span></a></li>
                 <li><a href='#rec_tab_sched'><span id='lang_RecSched'>Schedule</span></a></li>
               </ul>
@@ -77,7 +75,7 @@
                         <!--<option value='8'>Holiday</option>-->
                       </select>
                     </div>
-                    <table class='rec-time-index' hidden>
+                    <table class='rec-time-index'>
                       <thead>
                         <tr>
                           <th class="left"></th>

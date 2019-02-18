@@ -27,8 +27,7 @@
         
         <script type="text/javascript">
         passwordRenewCheck();
-        language_include();
-        global_entry_init();
+            language_include();
         </script>
 
         <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
@@ -73,40 +72,40 @@
                                     <dd>
                                         <input type="text" class="txtdisp" id="swverdate" name="swverdate" disabled="true"/>
                                     </dd>
-                                    <dt>
+                                    <!-- <dt>
                                         <span id='lang_HWVersion'>H/W Version</span>
                                     </dt>
                                     <dd>
                                         <input type="text" class="txtdisp" id="hwver" name="hwver" disabled="true"/>
-                                    </dd>
-                                    <dt class="video_recoder">
+                                    </dd> -->
+                                    <!-- <dt>
                                         <span id='lang_Diskcapacity'>Disk capacity</span>
                                     </dt>
-                                    <dd class="video_recoder">
+                                    <dd>
                                         <input type="text" class="txtdisp" id="diskcap" name="diskcap" disabled="true"/>
                                     </dd>
-                                    <dt class="video_recoder">
+                                    <dt>
                                         <span id='lang_DiskUsage'>Disk Usage</span>
                                     </dt>
-                                    <dd class="video_recoder">
+                                    <dd>
                                         <input type="text" class="txtdisp" id="diskuse" name="diskuse" disabled="true"/>
                                     </dd>
-                                    <dt class="video_recoder">
+                                    <dt>
                                         <span id='lang_DiskNum'>Number of Disks</span>
                                     </dt>
-                                    <dd class="video_recoder">
+                                    <dd>
                                         <input type="text" class="txtdisp" id="disknum" name="disknum" disabled="true"/>
-                                    </dd>
+                                    </dd> -->
                                     <dt>
                                         <span id='lang_IPaddress'>IP address</span>
                                     </dt>
                                     <dd>
                                         <input type="text" class="txtdisp" id="ipaddr" name="ipaddr" disabled="true"/>
                                     </dd>
-                                    <dt>
+                                    <dt style="display:none;">
                                         <span id='lang_IPv6address'>IPv6 address</span>
                                     </dt>
-                                    <dd>
+                                    <dd style="display:none;">
                                         <input type="text" class="txtdisp" id="ipv6addr" name="ipv6addr" disabled="true"/>
                                     </dd>
                                     <dt>
@@ -115,10 +114,10 @@
                                     <dd>
                                         <input type="text" class="txtdisp" id="macaddr" name="macaddr" disabled="true"/>
                                     </dd>
-                                    <dt>
+                                    <dt style="display:none;">
                                         <span id='lang_DDNSdomainname'>DDNS domain name</span>
                                     </dt>
-                                    <dd>
+                                    <dd style="display:none;">
                                         <input type="text" class="txtdisp" id="ddnsdomain" name="ddnsdomain" disabled="true"/>
                                     </dd>
                                     <dt>
@@ -133,16 +132,17 @@
                                     <dd>
                                         <input type="text" class="txtdisp" id="webservport" name="webservport" disabled="true"/>
                                     </dd>
-									<dt class="video_recoder">
+									<dt style="display:none;">
                                         <span id='lang_Resolution'>Resolution </span>
                                     </dt>
-                                    <dd class="video_recoder">
+                                    <dd >
+                                    <dd style="display:none;" >
                                         <input type="text" class="txtdisp" id="resolution" name="resolution" disabled="true"/>
                                     </dd>
-                                    <dt>
+                                    <dt style="display:none;">
                                         <span id='lang_Systemid'>System ID</span>
                                     </dt>
-                                    <dd>
+                                    <dd style="display:none;">
                                         <input type="text" class="txtdisp" id="sysname" name="sysname" disabled="true"/>
                                     </dd>
                                 </dl>
@@ -177,7 +177,7 @@
                                         </ul>
                                         <div class='clear'></div>
                                     </dd>
-                                    <dt class='ain_ondvr'>
+                                    <dt class='ain_ondvr'">
                                     	<span id='lang_SensorDVR'>Alarm In(DVR)</span>
                                     </dt>
                                     <dd class='ondvr'>

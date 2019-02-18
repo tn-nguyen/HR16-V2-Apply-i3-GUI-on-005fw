@@ -24,9 +24,7 @@
 
     <script type="text/javascript">
     passwordRenewCheck();
-    language_include();
-    global_entry_init();
-    </script>
+    language_include();</script>
 
     <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../scripts/jquery/jquery-1.6.1.js"></script>
@@ -60,15 +58,15 @@
               <h2>
                 <span id='lang_IPsetupsetting'>IP setup setting</span>
               </h2>
-              <div id="tab">
-                <ul>
+              <div id="tab" >
+                <ul style="display:none;">
                   <li><a href='#tab_ipv4'><span id="lang_ipv4">IPv4</span></a></li>
                   <li><a href='#tab_ipv6'><span id="lang_ipv6">IPv6</span></a></li>
                 </ul>
 
                 <div id="tab_ipv4">
-                  <h2><span id='lang_IPsetupsetting'>IP setup setting</span></h2>
-                  <h2 class="video_recoder"><span id='lang_ipv4_wan'>WAN</span></h2>
+                  <!-- <h2><span id='lang_IPsetupsetting'>IP setup setting</span></h2>
+                  <h2><span id='lang_ipv4_wan'>WAN</span></h2> -->
 
                   <div class="c_sp_div_net" >
                       <dl>
@@ -83,46 +81,56 @@
                   </div>
                   <div class="c_sp_div_net">
                     <dl>
+                      <div class="ip_line1">
                       <dt><span class="list"><span id='lang_ipaddress'>IP Address</span></span></dt>
                       <dd>
-                        <input type="text" id="ipaddressA" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="ipaddressB" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="ipaddressC" class="iptextbox ipsetting" maxlength="3">.
+                        <input type="text" id="ipaddressA" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="ipaddressB" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="ipaddressC" class="iptextbox ipsetting" maxlength="3"> .
                         <input type="text" id="ipaddressD" class="iptextbox ipsetting" maxlength="3">
                       </dd>
-                      <dt><span class="list"><span id='lang_gateway'>Gateway</span></span></dt>
-                      <dd>
-                        <input type="text" id="gatewayA" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="gatewayB" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="gatewayC" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="gatewayD" class="iptextbox ipsetting" maxlength="3">
-                      </dd>
+                    </div>
+                    <div class="ip_line2">
                       <dt><span class="list"><span id='lang_subnetmask'>Subnet Mask</span></span></dt>
                       <dd>
-                        <input type="text" id="subnetmaskA" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="subnetmaskB" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="subnetmaskC" class="iptextbox ipsetting" maxlength="3">.
+                        <input type="text" id="subnetmaskA" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="subnetmaskB" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="subnetmaskC" class="iptextbox ipsetting" maxlength="3"> .
                         <input type="text" id="subnetmaskD" class="iptextbox ipsetting" maxlength="3">
                       </dd>
+                    </div>
+                    <div class="ip_line3">
+                      <dt><span class="list"><span id='lang_gateway'>Gateway</span></span></dt>
+                      <dd>
+                        <input type="text" id="gatewayA" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="gatewayB" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="gatewayC" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="gatewayD" class="iptextbox ipsetting" maxlength="3">
+                      </dd>
+                    </div>
+                    <div class="ip_line4">
                       <dt><span class="list"><span id='lang_dns1server'>DNS 1st Server</span></span></dt>
                       <dd>
-                        <input type="text" id="ddns1serverA" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="ddns1serverB" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="ddns1serverC" class="iptextbox ipsetting" maxlength="3">.
+                        <input type="text" id="ddns1serverA" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="ddns1serverB" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="ddns1serverC" class="iptextbox ipsetting" maxlength="3"> .
                         <input type="text" id="ddns1serverD" class="iptextbox ipsetting" maxlength="3">
                       </dd>
+                    </div>
+                    <div class="ip_line5">
                       <dt><span class="list"><span id='lang_dns2server'>DNS 2st Server</span></span></dt>
                       <dd>
-                        <input type="text" id="ddns2serverA" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="ddns2serverB" class="iptextbox ipsetting" maxlength="3">.
-                        <input type="text" id="ddns2serverC" class="iptextbox ipsetting" maxlength="3">.
+                        <input type="text" id="ddns2serverA" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="ddns2serverB" class="iptextbox ipsetting" maxlength="3"> .
+                        <input type="text" id="ddns2serverC" class="iptextbox ipsetting" maxlength="3"> .
                         <input type="text" id="ddns2serverD" class="iptextbox ipsetting" maxlength="3">
                       </dd>
+                    </div>
                     </dl>
                   </div>
 
-                  <h2 class="video_recoder"><span id='lang_LAN'>LAN</span></h2>
-                  <div class="c_sp_div_net video_recoder">
+                  <!-- <h2><span id='lang_LAN'>LAN</span></h2>
+                  <div class="c_sp_div_net">
                     <dl>
                       <dt>
                         <span class="list"><span id='lang_use_ipv4_lan'>USE</span></span>
@@ -145,10 +153,11 @@
                         <input type="text" id="lan_ipv4_subnetmaskD" class="iptextbox lan_ipv4_ipsetting" maxlength="3">
                       </dd>
                     </dl>
-                  </div>
+                  </div> -->
         
                     <div class="c_sp_div_net">
                       <dl>
+                          <div class="ip_line6">
                         <dt><span class="list" id="lang_autoport_update">AUTO PORT UPDATE</span></dt>
                         <dd>
                           <select class="lstdisp" id="autoport" name="autoport">
@@ -156,7 +165,8 @@
                             <option value="1">ON</option>
                           </select>
                         </dd>
-        
+                        </div>
+                        <div class="ip_line7">
                         <dt>
                           <span class="list" id="lang_autoport_status">AUTO PORT STATUS</span>
                         </dt>
@@ -164,19 +174,23 @@
                           <input type="text" id="port_status" disabled>
                           <input type="button" class="portsettingbtn" id="confirm_conflict" value="CONFIRM CONFLICT">
                         </dd>
-        
+                        </div>
+                        <div class="ip_line8">
                         <dt><span class="list"><span id='lang_Rtspport'>RTSP service port</span></span></dt>
                         <dd>
                           <input type="text" id="rtspport" name="rtspport" class="portsetting" maxlength="5">
                           <input type="button" id="rtsp_autoport" class="portsettingbtn" value="AUTO PORT FORWARDING"/>
                           <input type="button" id="rtsp_removeport" class="portsettingbtn" value="REMOVE PORT"/>
                         </dd>
+                        </div>
+                        <div class="ip_line9">
                         <dt><span class="list"><span id='lang_Webserviceport'>Web service port</span></span></dt>
                         <dd>
                           <input type="text" id="netserviceport" name="netserviceport" class="portsetting" maxlength="5">
                           <input type="button" id="net_autoport" class="portsettingbtn" value="AUTO PORT FORWARDING"/>
                           <input type="button" id="net_removeport" class="portsettingbtn" value="REMOVE PORT"/>
                         </dd>
+                      </div>
                       </dl>
                     </div>
                     <div class="c_sp_div_net">

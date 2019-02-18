@@ -1282,8 +1282,8 @@ $z.v({
               || INFO_MODEL.indexOf("ANF5G") > 0 || INFO_MODEL.indexOf("ATM5G") > 0 || INFO_MODEL.indexOf("UTM5G") > 0 || INFO_MODEL.indexOf("UTM5X") > 0 || INFO_MODEL.indexOf("UTM5HG") > 0  || INFO_MODEL.indexOf("ANF5HG") > 0 ) {
               $(".vlossIgnoreInterval").show();
               $("table.event_vloss col.col2").css("width", "23%");
-              $("table.event_vloss col.col3").css("width", "20%");
-              $("table.event_vloss col.col4").css("width", "20%");
+              $("table.event_vloss col.col3").css("width", "18%");
+              $("table.event_vloss col.col4").css("width", "7%");
             }
 
             $('input:button.c_sp_btn_okcancel').click( function () {

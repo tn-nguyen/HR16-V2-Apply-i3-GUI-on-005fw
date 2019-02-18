@@ -26,10 +26,7 @@
 
     <script type="text/javascript" src="../scripts/libs/json3.min.js"></script>
 
-    <script type="text/javascript">
-      language_include();
-      global_entry_init();
-    </script>
+    <script type="text/javascript">language_include();</script>
 
     <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
     <link href="../scripts/jquery/ui.spinner.css" rel="stylesheet" type="text/css"/>
@@ -72,7 +69,7 @@
                       <tr>
                         <th><span id="lang_camCh">CHANNEL</span></th>
                         <th><span id="lang_activation">ACTIVATION</span></th>
-                        <th><span id="lang_mask_color">MASK COLOR</span></th>
+                        <th><span id="lang_mask_color">COLOR</span></th>
                       </tr>
                       <tr>
                         <th><span id="lang_selectAll">ALL</span></th>
@@ -452,14 +449,6 @@
                     </dl>
                   </div>
                   <div class="privmask-setup">
-                    <div id="privmaskimgdiv" style="height:405px;" align="center">
-                      <img id="privmaskimg" src="../images/images/loading_01.gif">
-                      <table id="privmaskBlock" class="privmask">
-                      </table>
-                    </div>
-                  </div>
-
-                  <div class="privmask-setup">
                     <input type="button" id="deselect" value="DESELECT"/>
                   </div>
 
@@ -533,6 +522,15 @@
                       </li>
                     </ul>
                   </div>
+                  <div class="privmask-setup">
+                    <div id="privmaskimgdiv" style="height:405px;" align="center">
+                      <img id="privmaskimg" src="../images/images/loading_01.gif">
+                      <table id="privmaskBlock" class="privmask">
+                      </table>
+                    </div>
+                  </div>
+
+                  
                 </div> <!-- tab -->
             </div>
             <div id="c_g_div_button">

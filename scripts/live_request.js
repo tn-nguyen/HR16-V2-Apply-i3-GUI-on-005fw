@@ -2673,8 +2673,7 @@ function live_updatePage()
           requestflag = false;
           sendcompleteflag = false;
           alert(errNoPermission);
-            // window.setTimeout("window.close()", 1) ;
-            move_login_page();
+          window.setTimeout("window.close()", 1) ;
 
           return;
         }
@@ -2888,7 +2887,6 @@ function live_postSetup(thisform, cmd)
 	request.open("POST", "/cgi-bin/webra_fcgi.fcgi", true);
 	request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 	request.setRequestHeader("cache-control","no-cache");
-
 	live_send(request, thisform, cmd);
 }
 
@@ -2965,14 +2963,6 @@ function live_status_visible()
     ptzli.onclick = null;
     ptzli.hidden = true;
     $("#ptzli").hide();
-  }
-
-  if(INFO_USE_VIDEO_ENCODER) {
-      $("#logli").hide();
-      $("#video_recoding").hide();
-  }
-  else {
-      $("#logli").show();
   }
 
 
@@ -3358,11 +3348,11 @@ function live_VichEnDis()
   var status_tbl = get_firstChild(c_l_div_status_contents);
 
   var row_chan = status_tbl.rows[0];
-  var row_ain_cam = status_tbl.rows[1];
-  var row_ain_dvr = status_tbl.rows[2];
-  var row_motion = status_tbl.rows[3];
-  var row_vloss = status_tbl.rows[4];
-  var row_record = status_tbl.rows[5];
+  var row_ain_cam = status_tbl.rows[4];
+  var row_ain_dvr = status_tbl.rows[5];
+  var row_motion = status_tbl.rows[1];
+  var row_vloss = status_tbl.rows[2];
+  var row_record = status_tbl.rows[3];
   var row_aout_cam = status_tbl.rows[6];
   var row_aout_dvr = status_tbl.rows[7];
 
@@ -3769,7 +3759,7 @@ function tablealpha()
 		alarm_elem.onmousedown = live_status_onmousedown;
 		alarm_elem.onmouseout = live_status_onmouseout;
 		alarm_elem.onmouseup = live_status_onmouseup;
-		alarm_elem.onclick = live_status_alarm_click;
+		//alarm_elem.onclick = live_status_alarm_click; // disable click
 		}
 
 		if (alarm_cam_elem)
@@ -3778,7 +3768,7 @@ function tablealpha()
 		alarm_cam_elem.onmousedown = live_status_onmousedown;
 		alarm_cam_elem.onmouseout = live_status_onmouseout;
 		alarm_cam_elem.onmouseup = live_status_onmouseup;
-		alarm_cam_elem.onclick = live_status_alarm_click;
+		//alarm_cam_elem.onclick = live_status_alarm_click; // disable click
 		}
 
 		if (motion_elem)
@@ -3787,7 +3777,7 @@ function tablealpha()
 		  motion_elem.onmousedown = live_status_onmousedown;
 		  motion_elem.onmouseout = live_status_onmouseout;
 		  motion_elem.onmouseup = live_status_onmouseup;
-		  motion_elem.onclick = live_status_motion_click;
+		  //motion_elem.onclick = live_status_motion_click; // disable click
 		}
 
 		if (vloss_elem)
@@ -3796,7 +3786,7 @@ function tablealpha()
 		  vloss_elem.onmousedown = live_status_onmousedown;
 		  vloss_elem.onmouseout = live_status_onmouseout;
 		  vloss_elem.onmouseup = live_status_onmouseup;
-		  vloss_elem.onclick = live_status_vloss_click;
+		  //vloss_elem.onclick = live_status_vloss_click; // disable click
 		}
 
 		if (recording_elem)
@@ -3805,7 +3795,7 @@ function tablealpha()
 		  recording_elem.onmousedown = live_status_onmousedown;
 		  recording_elem.onmouseout = live_status_onmouseout;
 		  recording_elem.onmouseup = live_status_onmouseup;
-		  recording_elem.onclick = live_status_recording_click;
+		  //recording_elem.onclick = live_status_recording_click; // disable click
 		}
 
     if (alarm_out_elem)
@@ -3814,7 +3804,7 @@ function tablealpha()
       alarm_out_elem.onmousedown = live_status_onmousedown;
       alarm_out_elem.onmouseout = live_status_onmouseout;
       alarm_out_elem.onmouseup = live_status_onmouseup;
-      alarm_out_elem.onclick = live_alarmout_alarmout_click;
+      //alarm_out_elem.onclick = live_alarmout_alarmout_click; // disable click
     }
 
     if (alarm_out_cam_elem)
@@ -3823,7 +3813,7 @@ function tablealpha()
       alarm_out_cam_elem.onmousedown = live_status_onmousedown;
       alarm_out_cam_elem.onmouseout = live_status_onmouseout;
       alarm_out_cam_elem.onmouseup = live_status_onmouseup;
-      alarm_out_cam_elem.onclick = live_alarmout_alarmout_cam_click;
+      //alarm_out_cam_elem.onclick = live_alarmout_alarmout_cam_click; // disable click
     }
   }
 }

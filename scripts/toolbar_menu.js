@@ -126,7 +126,7 @@ function print_toolbar_live_menu(obj, channel)
     }
     else if (parseInt(channel) == 16)
     {
-      idbtn1.style.cssText = "width: 156px; height:29px;  margin-right:30px; ";
+      idbtn1.style.cssText = "width: 156px; height:29px;  margin-right:20px; ";
     }
     else
     {

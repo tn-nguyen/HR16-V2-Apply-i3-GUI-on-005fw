@@ -24,9 +24,7 @@
 
   <script type="text/javascript">
   passwordRenewCheck();
-  language_include();
-  global_entry_init();
-  </script>
+  language_include();</script>
 
   <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
   <script type="text/javascript" src="../scripts/jquery/jquery-1.6.1.js"></script>
@@ -53,6 +51,7 @@
         <div id="c_sp_div_contents">
           <div class="c_sp_div_frame c_sp_div_frame_dot">
             <h2><span id="lang_ddnssetup">DDNS</span></h2>
+            <div class="ui-widget-content">
             <div class="c_sp_div_net_ddns">
               <dl>
                 <dt>
@@ -80,14 +79,17 @@
                   <!-- <input type="text" id='ddnsservers1' name="ddnsserver" class="txtnet alphanumeric show_s1" maxlength="63" style="display:none" disabled> -->
                 </dd>
                 <br/>
+                <div class="ddns_line1">
                 <dt class="hidden_s1">
-                  <span id='lang_DVRName' class="list">DVR Name</span>
+                  <span id='lang_DVRName' class="list"></span>
                 </dt>
                 <dd class="hidden_s1">
                   <input type="text" id="hostname" name="hostname" class="txtnet alphanumeric" maxlength="63">
 		  <input type="text" id="hidehostname" class="txtnet alphanumeric" maxlength="63" hidden/>
                   <input type="button" id="ddnsRegTest" value="lang_DDNSRegTest" />
                 </dd>
+              </div>
+              <div class="ddns_line2">
                 <dt class="remove_alsok">
                   <span id='lang_userid' class="list hidden_s1 none_ipx">USER NAME</span>
                 </dt>
@@ -95,6 +97,8 @@
                   <input type="text" id="username" name="username" class="txtnet alphanumeric hidden_s1 none_ipx" maxlength="63">
 		  <input type="text" id="hideusername" class="txtnet alphanumeric hidden_s1 none_ipx" maxlength="63" hide/>
                 </dd>
+              </div>
+              <div class="ddns_line3">
                 <dt class="remove_alsok">
                   <span id='lang_password' class="list hidden_s1 none_ipx">PASSWORD</span>
                 </dt>
@@ -102,6 +106,8 @@
                   <input type="password" id="passwd" name="passwd" class="txtnet alphanumeric hidden_s1 none_ipx" maxlength="32">
 		  <input type="password" id="hidepasswd" class="txtnet alphanumeric hidden_s1 none_ipx" maxlength="32" hide/>
                 </dd>
+              </div>
+              <div class="ddns_line4">
                 <dt>
                   <span class="list"><span id='lang_NVRAddr'>NVR Address</span></span>
                 </dt>
@@ -110,6 +116,7 @@
 		  <input type="text" id="hidedvraddress" class="txtnet" hidden/>
                   <input type="button" id="ddnsConnTest" value="lang_DDNSConnTest" />
                 </dd>
+              </div>
                 <br/>
                 <dt class="show_s1 none_ipx">
                   <span id='lang_p2p_enable' class="list">P2P ENABLE</span>
@@ -127,6 +134,7 @@
                 </dd>
               </dl>
             </div>
+          </div>
 	    <h2 id="sequrinet_title" name="sequrinet_title">SEQURINET SETTINGS</h2>
             <div class="c_sp_div_net_ddns" id="sequrinet_config" name="sequrinet_config">
               <dl>

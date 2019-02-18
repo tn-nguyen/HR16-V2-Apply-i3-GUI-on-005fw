@@ -33,7 +33,9 @@ var SchedWidget = function (settings, callback) {
         cellClass : 'cell_sched',
         dialogID : 'dialog_select',
         cpButtonID : 'cp_button',
-        popupCPID : 'popupCP',
+        popupCPID: 'popupCP',
+        csButtonID: 'cs_button',
+        popupCSID: 'popupCS',
         closeOnEscape: false
     };
     
@@ -67,6 +69,8 @@ SchedWidget.prototype = {
         var dialogID = '#' + settings.dialogID;
         var cpButtonID = '#' + settings.cpButtonID;
         var popupCPID = '#' + settings.popupCPID;
+        var csButtonID = '#' + settings.csButtonID;
+        var popupCSID = '#' + settings.popupCSID;
         
         // Schedule Init
         $(divID).selectable( {
@@ -140,7 +144,7 @@ SchedWidget.prototype = {
         $(popupCPID).dialog({
             autoOpen : false,
             modal : true,
-            width : 180,
+            width : 230,
             title : langArray["LTXT_SETUPEVENT_COPY_SCHED"],
             create: function(event, ui) {
                 var ul = $('<ul>');
@@ -227,6 +231,108 @@ SchedWidget.prototype = {
             }]
         });
 
+        //"Copy Settings To" popup
+        $(popupCSID).dialog({
+            autoOpen: false,
+            modal: true,
+            width: 230,
+            height: 300,
+            title: langArray["LTXT_COPY_SETTINGS_TO"],
+            create: function (event, ui) {
+                var ul = $('<ul>');
+                var li;
+                var title = [langArray["LTXT_SELECT_ALL"],
+                    "CAM1",
+                    "CAM2",
+                    "CAM3",
+                    "CAM4",
+                    "CAM5",
+                    "CAM6",
+                    "CAM7",
+                    "CAM8",
+                    "CAM9",
+                    "CAM10",
+                    "CAM11",
+                    "CAM12",
+                    "CAM13",
+                    "CAM14",
+                    "CAM15",
+                    "CAM16"
+                    ];
+
+                for (var i = 0; i < 17; i++) {
+                    li = $('<li>').append(
+                        $('<label>').append(
+                            $('<input>').attr('type', 'checkbox').attr('id', 'cpS' + i)
+                        ).append(title[i])
+                    );
+                    ul.append(li);
+                }
+                $(this).append(ul);
+
+                // setup event handler
+                $('input#cpS0').change(function () {// All
+                    if ($(this).prop('checked')) {
+                        $(this).closest('ul').find('input:checkbox').prop('checked', true);
+                    } else {
+                        $(this).closest('ul').find('input:checkbox').is(function (index) {
+                            //if (index != (widget.currentDay + 1)) {
+                            //    $(this).prop('checked', false);
+                            //}
+                        });
+                    }
+                });
+
+                //for (var day = 1; day < 8; day++) {
+                //    $('input#cpSch' + day).change(chkEventHandler(day));
+                //}
+            },
+            open: function (event, ui) {
+                //var chks = $(this).find('input:checkbox');
+                //chks.removeAttr("disabled");
+
+                //$(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
+
+                //for (var day = 0; day < 8; day++) {
+                //    $('#cpSch' + day).attr('checked', false);
+                //}
+
+                //chks.is(function (index) {
+                //    if (index == (widget.currentDay + 1)) { // 0 is All
+                //        $(this).attr("disabled", "disabled");
+                //        $(this).prop("checked", true);
+                //    }
+                //});
+
+                //widget.currentDay;
+            },
+            buttons: [{
+                text: langArray["LTXT_OK"],
+                click: function () {
+                    //var chks = $(this).find('input:checkbox');
+                    //var from = widget.currentDay;
+                    //var to;
+
+                    //for (to = 0; to < 7; to++) {
+                    //    if (from != to && chks[to + 1].checked) {
+                    //        widget._copySched(from, to);
+                    //    }
+                    //}
+
+                    //if (typeof widget.callback == 'function') {
+                    //    widget.callback(widget);
+                    //}
+
+                    $(this).dialog('close');
+                }
+            }, {
+                text: langArray["LTXT_CANCEL"],
+                click: function () {
+                    $(this).dialog('close');
+                }
+            }]
+        });
+
         //////////////////////////////////////////
         // Schedule Dialog Button Event Bind
         //////////////////////////////////////////
@@ -250,12 +356,26 @@ SchedWidget.prototype = {
         $(cpButtonID).click(function () {
             var offset = $(cpButtonID).offset();
             offset.top += $(this).outerHeight();
+            offset.left -= 50;
             
             $(popupCPID).dialog(
                 "option", "position", [offset.left, offset.top]
             );
             
             $(popupCPID).dialog('open');
+        });
+
+        // "Copy Settings To" Button in setup_cam_image.htm page
+        $(csButtonID).click(function () {
+            var offset = $(csButtonID).offset();
+            offset.top += $(this).outerHeight();
+            offset.left -= 108;
+
+            $(popupCSID).dialog(
+                "option", "position", [offset.left, offset.top]
+            );
+
+            $(popupCSID).dialog('open');
         });
 
         

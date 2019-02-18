@@ -712,7 +712,8 @@ $z.c({
         autoResize: true,
         me: null,
         open: function(event, ui) {
-          me = $( this );
+          $('.ui-dialog-titlebar-close').show();
+          me = $(this);
           $('#nand_info_note').html("<" + langArray["LTXT_SYSSET_NAND_FWUP_NOTE"] + ">");
           $('#nand_info_dont_close_browser').html("1. " + langArray["LTXT_SYSSET_NAND_FWUP_NOTE_DONT_CLOSE_BROWSER"]);
           $('#nand_info_dont_close_server').html("2. " + langArray["LTXT_SYSSET_NAND_FWUP_NOTE_DONT_CLOSE_SERVER"]);
@@ -862,7 +863,7 @@ $z.c({
         modal: true,
         show: 'drop',
         hide: 'drop',
-        title: langArray["LTXT_SETUPSYSMANAGE_FACTORYRESET"],
+        title: langArray["LTXT_SETUPSYSMANAGE_TITLE_FACTORYRESET"],
         width: '450px',
         resizable: false,
         closeOnEscape: false,

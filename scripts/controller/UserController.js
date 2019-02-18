@@ -12,7 +12,7 @@ $z.c({
         modal: true,
         show: 'drop',
         hide: 'drop',
-        width: INFO_ENHANCED_PASSWORD == '1' ? '740px' : '450px',
+        width: INFO_ENHANCED_PASSWORD == '1' ? '523px' : '450px',
         me: null,
         mode: null,
 

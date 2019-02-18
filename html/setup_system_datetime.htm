@@ -24,7 +24,6 @@
   <script type="text/javascript">
     passwordRenewCheck();
     language_include();
-    global_entry_init();
   </script>
 
   <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
@@ -76,13 +75,16 @@
             <div id="datetime_tab_datetime">
               <div class="c_sp_div_frame">
                 <h2><span id='lang_DateTimeSetup'>Date/Time setting</span></h2>
+                <div class="ui_widget-content">
                 <div class="c_sp_div_system_date">
                   <dl>
+                    <div class="dt_line1">
                     <dt class="datetime" style="display:none;"><span class="list"><span id='lang_DateTimeSetting'>Date/Time</span></span></dt>
                     <dd class="datetime" style="display:none;">
                     <input type="button" id="dayandtime" name="dayandtime" class="btndisp" value="time"/>
                     </dd>
-
+                  </div>
+                  <div class="dt_line2">
                     <dt><span class="list"><span id='lang_Dateformat'>Date format</span></span></dt>
                     <dd>
                     <select  id="dateformat" name="dateformat" class="lstdisp">
@@ -91,6 +93,8 @@
                       <option value="2">DD/MM/YYYY</option>
                     </select>	
                     </dd>
+                  </div>
+                  <div class="dt_line3">
                     <dt><span class="list"><span id='lang_Timeformat'>Time format</span></span></dt>
                     <dd>
                     <select  id="timeformat" name="timeformat" class="lstdisp">
@@ -98,17 +102,22 @@
                       <option value="1">AM / PM</option>
                     </select>	
                     </dd>
+                  </div>
                   </dl>
                 </div>
+              </div>
               </div>
               <div class="c_sp_div_frame">
                 <h2><span id='lang_NetworkTimeSync'>Network Time Sync</span></h2>
                 <div class="c_sp_div_system_date">
                   <dl>
+                      <div class="dt_line4">
                     <dt><span class="list"><span id='lang_Networktimeserversetup'>Network time server setup</span></span></dt>
                     <dd>
                     <input type="text" class="lstdisp" id="nettimeservsetup" name="nettimeservsetup" maxlength="64" />
                     </dd>
+                    </div>
+                    <div class="dt_line5">
                     <dt><span class="list"><span id='lang_AutoTimeSync'>Auto Time Sync</span></span></dt>
                     <dd>
                     <select  id="autotimesync" name="autotimesync" class="lstdisp">
@@ -116,6 +125,8 @@
                       <option value="1">On</option>
                     </select>
                     </dd>
+                  </div>
+                  <div class="dt_line6">
                     <dt><span class="list"><span id='lang_SyncCycle'>Sync Cycle</span></span></dt>
                     <dd>
                     <select id="syncfreq" name="syncfreq" class="lstdisp">
@@ -126,6 +137,8 @@
                       <option value="15552000" id="lang_180day">180 DAYS</option>
                     </select>
                     </dd>
+                  </div>
+                  <div class="dt_line7">
                     <dt><span class="list"><span id='lang_SyncTime'>Sync Time</span></span></dt>
                     <dd>
                     <select  id="synctime" name="synctime" class="lstdisp">
@@ -155,10 +168,13 @@
                       <option value="23">23:00</option>
                     </select>
                     </dd>
+                  </div>
+                  <div class="dt_line8">
                     <dt><span class="list"><span id='lang_NextSyncTime'>Next Sync Time</span></span></dt>
                     <dd>
                     <input type="text" class="lstdisp" id="nextsynctime" name="nextsynctime" maxlength="64" disabled="true" />
                     </dd>
+                  </div>
                   </dl>
                 </div>
               </div>
@@ -166,6 +182,7 @@
                 <h2><span id='lang_TimezoneDST'>Timezone / DST</span></h2>
                 <div class="c_sp_div_system_date">
                   <dl>
+                      <div class="dt_line9">
                     <dt><span class="list"><span id='lang_Timezonesetup'>Time zone setup</span></span></dt>
                     <dd>
                     <select  id="timezone" name="timezone" class="lstdisp">
@@ -225,6 +242,8 @@
                       <!--<option value="99">User-defined D.S.T.       </option>-->
                     </select>
                     </dd>
+                    </div>
+                    <div class="dt_line10">
                     <dt><span class="list"><span id='lang_DST'>D.S.T</span></span></dt>
                     <dd>
                     <select  id="dst" name="dst" class="lstdisp">
@@ -232,6 +251,7 @@
                       <option value="1">On</option>
                     </select>	
                     </dd>
+                  </div>
                     <!-- user dst
                     <dt><span class="list"><span id='lang_UserDST'>User Defined D.S.T</span></span></dt>
                     <dd>

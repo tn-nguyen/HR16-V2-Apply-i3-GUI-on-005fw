@@ -10,7 +10,6 @@
     <script type="text/javascript" src="../scripts/global.js"></script>
     <script type="text/javascript">
       info_include();
-      global_entry_init();
     </script>
     <script type="text/javascript" src="../scripts/libs.js"></script>
     <script type="text/javascript" src="../scripts/top_menu.js"></script>
@@ -58,6 +57,7 @@
                         <span id="lang_rtsp_service">RTSP SERVICE</span>
                       </h2>
                       <dl>
+                        <div class="secu_line1">
                         <dt>
                           <span id="lang_rtspencenable">RTSP ENCRYPTION ENABLE</span>
                         </dt>
@@ -67,12 +67,15 @@
                             <option value="1">On</option>
                           </select>
                         </dd>
+                      </div>
+                      <div class="secu_line2">
                         <dt>
                           <span id="lang_rtspencmethod">RTSP ENCRYPTION METHOD</span>
                         </dt>
                         <dd>
                           <input type="text" readonly id="srtsp_method"></input>
                         </dd>
+                      </div>
                       </dl>
                       <br/>
                     </div>
@@ -80,6 +83,7 @@
                       <span id="lang_webservice">WEB SERVICE</span>
                     </h2>
                     <dl>
+                        <div class="secu_line3">
                       <dt>
                         <span id="lang_httpsenable">HTTPS ENABLE</span>
                       </dt>
@@ -89,20 +93,24 @@
                           <option value="1">On</option>
                         </select>
                       </dd>
-                      <dt hidden>
+                      </div>
+                      <div class="secu_line4">
+                      <dt>
                         <span id="lang_httpauthmethod">HTTP AUTHENTICATION METHOD</span>
                       </dt>
-                      <dd hidden>
+                      <dd>
                         <select id="httpauth_method" name="httpauth_method">
                           <option value="0">BASIC</option>
                           <option value="1">DIGEST</option>
                         </select>
                       </dd>
+                    </div>
                     </dl>
                   </div>
                   <!-- //tab_encryption -->
                   <div id="tab_ipfilter" class="tabpage">
                     <dl>
+                      <div class="ip_fil_line1">
                       <dt>
                         <span id="lang_ipfilterenable">IP FILTER ENABLE</span>
                       </dt>
@@ -112,6 +120,7 @@
                           <option value="1">On</option>
                         </select>
                       </dd>
+                    </div>
                       <dt>
                         <span id="lang_ipfilterrule">IP FILTER RULE</span>
                       </dt>

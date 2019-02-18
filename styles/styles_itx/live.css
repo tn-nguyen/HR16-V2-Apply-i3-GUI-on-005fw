@@ -76,7 +76,7 @@ email	: mybusisi@itxsecurity.com
 .c_l_tb_status img {display: block; margin-left: auto; margin-right: auto;width: 16px; height: auto;}
 
 #c_l_div_status_contents {margin:-1px 134px 20px 0px; width:722px; margin-bottom:20px; background-color:#3e3e3e; border:1px solid #C5D5E0; z-index:4;}
-.c_l_tb_status {width:656px; height:139px; padding:0; table-layout:fixed; margin:19px auto 5px auto; border-collapse:collapse;}
+.c_l_tb_status {width:656px; height:144px; padding:0; table-layout:fixed; margin:19px auto 5px auto; border-collapse:collapse;}
 .c_l_tb_status td.head {width:141px; padding:0; border:1px solid #ffffff; background-color:#E6F0F9; font-weight:normal; color:#373487; letter-spacing:-1; text-decoration:none; text-align:center;}
 *.c_l_tb_status td.head {width:auto; padding:0; border:1px solid #ffffff; background-color:#E6F0F9; font-weight:normal; color:#373487; letter-spacing:-1; text-decoration:none; text-align:center;}
 .c_l_tb_status td.ch_1 {width:31px; padding:0; border:1px solid #ffffff; background-color:#E6F0F9; color:#84B6D7; letter-spacing:-1; text-decoration:none; text-align:center;}
@@ -157,3 +157,8 @@ email	: mybusisi@itxsecurity.com
 #div_change_password .table {margin-bottom:3px; border-bottom:1px dotted #C5D0E0;}
 #div_change_password .confirm {margin:3px; float:right;}
 #div_change_password #submit {width:100px; height:23px;}
+
+/****************************************************************************************************************************************/
+#c_l_div_toolbar #idbtn3 li:nth-child(2), #idbtn3 li:nth-child(4), #idbtn3 li:nth-child(8){
+	display: none;
+}

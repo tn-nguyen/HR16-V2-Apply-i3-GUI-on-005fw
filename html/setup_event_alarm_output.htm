@@ -26,8 +26,7 @@
 
   <script type="text/javascript">
   passwordRenewCheck();
-  language_include();
-  global_entry_init();
+    language_include();
   </script>
   <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
   <link href="../scripts/jquery/jquery.dropdownMulti.css" rel="stylesheet" type="text/css" />
@@ -51,7 +50,7 @@
       <div id="c_sp_div_menubar_sub">
         <ul style="padding-left:10px; padding-top:10px;">
           <script type="text/javascript">
-            print_left_menu(document, "Event", "Alarm output");
+            print_left_menu(document, "Event", "Alarm output"); 
           </script>
         </ul>
       </div>
@@ -63,15 +62,15 @@
                 Alarm output setting
               </span>
             </h2>
-            <div id="event_tabs">
-              <ul>
+            
+              <!-- <ul>
                 <li>
                 <a href='#event_tab_alarmout'><span id='lang_Alarmout'>Alarm Out</span></a>
                 </li>
                 <li>
                 <a href='#event_tab_sched'><span id='lang_EventSched'>On/Off Schedule</span></a>
                 </li>
-              </ul>
+              </ul> -->
               <!-------------- First tab ------------------>
               <div id='event_tab_alarmout'>
                 <div class="c_sp_div_sensor">
@@ -159,7 +158,7 @@
                             <option value='120'>120 SEC</option>
                             <option value='180'>180 SEC</option>
                             <option value='300'>300 SEC</option>
-                            <option value='9999'>UNTIL KEY</option>
+                            <!-- <option value='9999'>UNTIL KEY</option> -->
                           </select>
                         </td>
                       </tr>
@@ -760,6 +759,11 @@
                 </div>
               </div>    
               <!--               Second tab                 -->
+              <h2 id="h2_OnoffSchedule">
+                <span id='lang_OnoffSchedule'>
+                  ON/OFF SCHEDULE
+                </span>
+              </h2>
               <div id='event_tab_sched'>
                 <div class='ao_sched'>
                   <div class="schmodediv">
@@ -773,28 +777,29 @@
                       <option value='5'>FRI</option>
                       <option value='6'>SAT</option>
                     </select>
+                    <ul class='indices'>
+                      <li class='arout_color1 box'>
+                      &nbsp;
+                      </li>
+                      <li>
+                      <span id='lang_off'>OFF</span>
+                      </li>
+                      <li class='arout_color2 box'>
+                      &nbsp;
+                      </li>
+                      <li>
+                      <span id='lang_on'>ON</span>
+                      </li>
+                      <li class='arout_color3 box'>
+                      &nbsp;
+                      </li>
+                      <li>
+                      <span id='lang_event'>EVENT</span>
+                      </li>
+                    </ul>
                   </div>
 
-                  <ul class='indices'>
-                    <li class='arout_color1 box'>
-                    &nbsp;
-                    </li>
-                    <li>
-                    <span id='lang_off'>OFF</span>
-                    </li>
-                    <li class='arout_color2 box'>
-                    &nbsp;
-                    </li>
-                    <li>
-                    <span id='lang_on'>ON</span>
-                    </li>
-                    <li class='arout_color3 box'>
-                    &nbsp;
-                    </li>
-                    <li>
-                    <span id='lang_event'>EVENT</span>
-                    </li>
-                  </ul>
+                 
 
                   <br/>
 
@@ -1368,7 +1373,6 @@
                   <div class='clear'></div>
                 </div>
               </div>
-            </div>
           </div>
           <div id="c_g_div_button">
             <input type="submit" value="lang_OK" class="c_sp_btn_okcancel"/>

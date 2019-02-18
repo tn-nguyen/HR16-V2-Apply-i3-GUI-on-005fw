@@ -25,9 +25,7 @@
 
     <script type="text/javascript">
     passwordRenewCheck();
-    language_include();
-    global_entry_init();
-    </script>
+    language_include();</script>
 
     <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../scripts/jquery/jquery-1.6.1.js"></script>
@@ -58,12 +56,14 @@
                           <div id="c_sp_div_contents">
                             <div class="c_sp_div_frame c_sp_div_frame_dot">
                               <h2><span id='lang_Emailsetting'>E-mail setting</span></h2>
+                              <div class="ui-widget-content">
                               <div class="c_sp_div_net">
                                 <dl class="mail_header">
                                   <span class="mail_header1"><span id="lang_mail_server1">MAIL SERVER</span> 1</span>
                                   <span class="mail_header2"><span id="lang_mail_server2">MAIL SERVER</span> 2</span>
                                 </dl>
                                 <dl>
+                                  <div class="email_line1">
                                   <dt>
                                   <span class='list'><span id='lang_Server'>Server</span></span>
                                   </dt>
@@ -71,6 +71,8 @@
                                   <input type="text" id="server1" name="server1" maxlength="63"; class="txtnet" />
                                   <input type="text" id="server2" name="server2" maxlength="63"; class="txtnet2 using_email2" />
                                   </dd>
+                                </div>
+                                <div class="email_line2">
                                   <dt>
                                   <span class='list'><span id='lang_Port'>Port</span></span>
                                   </dt>
@@ -78,10 +80,13 @@
                                   <input type="text" id="port1" name="port1" class="txtnet" maxlength="5"/>
                                   <input type="text" id="port2" name="port2" class="txtnet2 using_email2" maxlength="5"/>
                                   </dd>
+                                </div>
+                                <div class="email_line3">
                                   <dt>
                                   <span class='list'><span id='lang_Security'>Security</span></span>
                                   </dt>
                                   <dd>
+                                  
                                   <select id="security1" name="security1" class="lstdisp" >
                                     <option value="0">Off</option>
                                     <option value="1">On</option>
@@ -91,11 +96,11 @@
                                     <option value="1">On</option>
                                   </select>
                                   </dd>
-
+                                  </div>
                                 </dl>
-                              </div>
-                              <div class="c_sp_div_net">
+                              
                                 <dl>
+                                    <div class="email_line4">
                                   <dt>
                                   <span class='list'><span id='lang_User'>User</span></span>
                                   </dt>
@@ -103,6 +108,8 @@
                                   <input type="text" id="user1" class="txtnet" maxlength="63"; name="user1" />
                                   <input type="text" id="user2" class="txtnet2 using_email2" maxlength="63"; name="user2" />
                                   </dd>
+                                  </div>
+                                  <div class="email_line5">
                                   <dt>
                                   <span class='list'><span id='lang_Password'>Password</span></span>
                                   </dt>
@@ -110,6 +117,7 @@
                                   <input type="password" id="password1" class="txtpwd" name="password1" maxlength="16"; />
                                   <input type="password" id="password2" class="txtpwd2 using_email2" name="password2" maxlength="16"; />
                                   </dd>
+                                </div>
                                   <dt class="using_email2">
                                   <span class='list'><span id='lang_Individual_Email'>SENDING INDIVIDUAL EMAIL</span></span>
                                   </dt>
@@ -124,8 +132,7 @@
                                   </select>
                                   </dd>
                                 </dl>
-                              </div>
-                              <div class="c_sp_div_net">
+                             
                                 <dl>
                                   <dt>
                                   <span class='list'><span id='lang_testemail'>Test e-mail To:</span></span>
@@ -143,6 +150,7 @@
                                   </dd>
                                 </dl>
                               </div>
+                            </div>
                           </div>
 
                           <div id="c_g_div_button">

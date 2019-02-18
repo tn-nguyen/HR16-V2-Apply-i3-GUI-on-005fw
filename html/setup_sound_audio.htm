@@ -25,9 +25,7 @@
 
         <script type="text/javascript">
         passwordRenewCheck();
-        language_include();
-        global_entry_init();
-        </script>
+        language_include();</script>
 
         <link href="../scripts/jquery/themes/ipx/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" src="../scripts/jquery/jquery-1.6.1.js"></script>
@@ -50,12 +48,13 @@
 
                 <form name="soundsetting_audio" id="soundsetting_audio" action='/cgi-bin/webra_fcgi.fcgi'>
                     <div id="c_sp_div_contents">
-                        <div class="c_sp_div_frame c_sp_div_frame_dot">
+                        <div class="c_sp_div_frame c_sp_div_frame_dot ">
                             <h2>
                             <span id='lang_AudioSetting'>
                                 Audio setting
                             </span>
-                            </h2>
+							</h2>
+							<div class="ui-widget-content">
                             <div id="divsound" class="c_sp_div_sound">
                             	<dl class="liveaud">
                             		<dt><span id='lang_Defaultaudiochannel'> Live audio </span></dt>
@@ -79,6 +78,11 @@
                                             <option value="1">On</option>
                                         </select>
                             		</dd>
+
+                            	</dl>
+							</div>
+							<div id="renetaudio" class="c_sp_div_sound">
+                            	<dl class="netaud">
                             		<dt>
                                         <span class="list">
                                             <span id='lang_Networkaudioreceive'>
@@ -93,7 +97,8 @@
                                         </select>
                             		</dd>
                             	</dl>
-                            </div>
+							</div>
+						</div>
                             <!-- 
                             <div id="divaudioin" class="c_sp_div_sound">
                             	<dl>
@@ -216,12 +221,12 @@
                             	</dl>
                             </div>
                             -->
-                            <h2 class="video_recoder">
+                            <!-- <h2>
                             <span id='lang_BuzzerSetting'>
                                 Buzzer setting
                             </span>
                             </h2>
-                            <div class="c_sp_div_sound video_recoder">
+                            <div class="c_sp_div_sound">
                             	<dl>
                             		<dt>
                             			<span id='lang_RemoteSetting'>Remote Controller</span>
@@ -244,7 +249,7 @@
                                 </dd>
                                 
                             	</dl>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div id="c_g_div_button">

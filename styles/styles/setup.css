@@ -41,7 +41,7 @@ select:disabled {background-color:#AAA;}
 /**************************************************************************************************************************************/
 /* Menu Bar*/
 #c_sp_div_menubar {clear:both; width:1020px;}
-#c_sp_div_menubar_sub {display:none; float:left;width:200px;
+#c_sp_div_menubar_sub {float:left;width:200px;
   min-height:450px;
   min-height:93vh;
    background-color:#424242; border:none;z-index:2;
@@ -63,7 +63,7 @@ select:disabled {background-color:#AAA;}
 
 /**************************************************************************************************************************************/
 /* Setup Frame*/
-#c_sp_div_contents {display: none;float:left; width:812px;
+#c_sp_div_contents {float:left; width:812px;
   /*min-height:450px;*/
   min-height:93vh;
   margin-left:1px; margin-top:-15px;background-color:#343434; border:none; z-index:2;}
@@ -143,9 +143,8 @@ ul#verinfo {font-size:1.2em; width:35%; margin:-1px auto 5px 30%; line-height:1.
 .add_vertical_align_baseline {vertical-align:baseline;}
 
 /* Camera Camera*/
-.c_sp_tb_cam_cam4 {width:750px; height:115px; padding:0; table-layout:fixed;
+.c_sp_tb_cam_cam4 {margin-left: -40px !important; width:730px; height:115px; padding:0; table-layout:fixed;
   /*margin:5px auto 5px auto; */
-  margin: 0px;
   border-collapse: collapse; text-align:center;}
 .c_sp_tb_cam_cam8 {width:600px; height:92px; padding:0; table-layout:fixed; margin:-5px auto 5px auto; border-collapse: collapse; text-align:center;}
 .c_sp_tb_cam_cam16 {width:600px; height:184px; padding:0; table-layout:fixed; margin:-5px auto 5px auto; border-collapse: collapse; text-align:center;}
@@ -197,7 +196,7 @@ ul#verinfo {font-size:1.2em; width:35%; margin:-1px auto 5px 30%; line-height:1.
 .c_sp_tb_cam_image_head3 {height:23px; padding:0; background-color:#525252; font-weight:normal; color:#6CA4C8; letter-spacing:0; text-decoration:none; text-align:center;}
 .c_sp_tb_cam_image_head4 {height:23px; padding:0; background-color:#525252; font-weight:normal; color:#6CA4C8; letter-spacing:0; text-decoration:none; text-align:center;}
 
-.c_sp_tb_cam_stream_head {padding:0; border-right:1px solid #C5D5E0; background-color:#525252; font-weight:normal; color:#6CA4C8; letter-spacing:0; text-decoration:none; text-align:center;}
+.c_sp_tb_cam_stream_head {padding:6px 0; border-right:1px solid #C5D5E0; background-color:#525252; font-weight:normal; color:#6CA4C8; letter-spacing:0; text-decoration:none; text-align:center;}
 
 .c_sp_td_cam_image1 {width:50px; border-bottom:1px solid #E6F0F9; text-align:center; border-right:1px solid #E6F0F9;background-color:#3e3e3e; font-weight:normal; color:#373487; letter-spacing:0; text-decoration:none;}
 .c_sp_td_cam_image2 {width:120px; border-bottom:1px solid #E6F0F9; text-align:center; border-right:1px solid #E6F0F9;background-color:#3e3e3e; font-weight:normal; color:#373487; letter-spacing:0; text-decoration:none;}
@@ -308,8 +307,8 @@ table.cam_ptz tr .disabled td { background-color: #9f9f9f; }
 */
 
 .c_sp_txt_cam_ptz_addr {ime-mode:disabled; width:96%;}
-.c_sp_lst_cam_ptz_sel {width:100%; border: 1px solid #ffffff;}
-.c_sp_lst_cam_ptz_pt {width:100%;border: 1px solid #ffffff;}
+.c_sp_lst_cam_ptz_sel {width:90%; border: 1px solid #ffffff;}
+.c_sp_lst_cam_ptz_pt {width:90%;border: 1px solid #ffffff;}
 
 /* Camera Motion */
 table#motion-act {width:95%; padding:0; table-layout:fixed; margin:5px auto 5px auto; border-collapse: collapse; text-align:center;}
@@ -331,20 +330,20 @@ table.motion {max-width:710px; height:405px; padding:0;
   background-repeat:no-repeat; border-collapse: collapse; background-position:center; table-layout:fixed; z-index:1000;}
 
 div.motion_setup { padding:0; margin-bottom:20px;}
-div.motion_setup dl dt {float:left; min-width:150px; text-align:right; margin-right:5px;}
+div.motion_setup dl dt {float:left; min-width:138px; text-align:right; margin-right:5px;}
 
 div.motion_setup dl {width:400px;}
 div.motion_setup dl dt{line-height:20px;float:left; height:25px; font-weight:normal; color:#78ABCD; font-size:12px; text-decoration:none; text-align:right; width:125px; margin-right:5px; }
 div.motion_setup dl dt span{height:20px;}
-div.motion_setup dl dd{display:inline-block; height:25px; width:220px;}
+div.motion_setup dl dd{display:inline-block; height:25px; width:226px;}
 
-div.motion_setup select {width:100px; height:21px; margin:2px 0 1px 0; text-align:left;  color: black;}
+div.motion_setup select {width:105px; height:21px; margin:2px 0 1px 0; text-align:left;  color: black;}
 
 div.motion_setup table.sensitivity { width:600px; margin-top: 15px !important; } /*nguyen #10985 20171026 */
 div.motion_setup table.sensitivity col.prop1  { width: 150px; }
 div.motion_setup table.sensitivity col.prop2  { width: 225px; }
-div.motion_setup table.sensitivity th { text-align:center; color:#78ABCD; }
-div.motion_setup table.sensitivity tbody th { padding-right:5px; text-align:right; }
+div.motion_setup table.sensitivity th { text-align:left; color:#78ABCD; }
+div.motion_setup table.sensitivity tbody th { padding-right:5px; text-align:left; }
 div.motion_setup table.sensitivity td { border:none; }
 div.motion_setup table.sensitivity select { text-align:center; width: 225px;  }
 
@@ -430,17 +429,17 @@ dl#privmask-legend dd {width:40px;height:20px; color:#78ABCD;}
 
 div.privmask-setup { padding:0; margin-bottom:20px;}
 
-div.privmask-setup dl { width: 70%; overflow: hidden; margin-left: 50px;}
+div.privmask-setup dl { width: 70%; overflow: hidden;}
 div.privmask-setup dt { width: 25%; float: left; }
-div.privmask-setup dd select {width:100px; height:21px; margin:2px 0 1px 0; text-align:left;  color: #373487;}
+div.privmask-setup dd select {width:100px; height:21px; margin:2px 0 1px 0; text-align:left;  color: #000000;}
 
-div.privmask-setup ul { width: 70%; overflow: hidden; margin-left: 50px;}
+div.privmask-setup ul { width: 70%; overflow: hidden;}
 div.privmask-setup ul li.all { width: 100%; float:none; }
 div.privmask-setup ul li { width: 40%; float: left; line-height: 1.8em; }
 
 div.privmask-setup ul li label.disabled { color: #bcbcbc; }
 
-div.privmask-setup input#deselect { float: right; width: 100px; }
+div.privmask-setup input#deselect { float: right; width: 100px; margin-top: 35px;}
 
 div#privmaskimgdiv {width:710px; height:405px; z-index:2000; }
 div#privmaskimgdiv img {width:710px; height: 405px;}
@@ -559,10 +558,10 @@ div#cam_tamper table td {height:23px; border-bottom:1px solid #E6F0F9; text-alig
 /* Sound */
 /**************************************************************************************************************************************/
 /* Sound Audio */
-.c_sp_div_sound { margin-top: 10px; margin-bottom:40px; width:500px;}
+.c_sp_div_sound { margin-top: 14px; margin-bottom: 20px; width:500px;}
 
 .c_sp_div_sound dl { line-height:24px; }
-.c_sp_div_sound dl dt {width:300px; margin-right: 5px; font-weight:normal;  color:#c3c3c3; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
+.c_sp_div_sound dl dt {width:300px; margin-right: 5px;margin-left: 20px; font-weight:normal;  color:#ffffff; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
 .c_sp_div_sound dl dd .lstdisp {width:170px; height:22px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000;}
 
 /**************************************************************************************************************************************/
@@ -593,18 +592,18 @@ div#cam_tamper table td {height:23px; border-bottom:1px solid #E6F0F9; text-alig
 .c_sp_tbl_system .txtlist {font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; line-height:24px; text-align: right;}
 
 
-.c_sp_div_system {margin-top: 10px; margin-bottom:40px;}
+.c_sp_div_system {margin-top: 10px; margin-bottom:-10px;}
 .c_sp_div_system .butdisp {width:170px; height:21px; margin-left:5px; text-align: center;  color: #373487;}
-.c_sp_div_system .lstdisp {width:170px; height:21px; margin-left:5px; text-align: left;  color: #000;}
+.c_sp_div_system .lstdisp {width:251px; height:21px; text-align: left;  color: #000;}
 .c_sp_div_system .txtdisp {width:170px; height:19px; margin-left:5px; text-align: left;  color: #373487;}
 .c_sp_div_system .txtlist {font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; line-height:24px; text-align: right;}
 
-.c_sp_div_system dl {line-height: 34px; margin-top: 10px; margin-bottom: 10px !important;}
-.c_sp_div_system dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#c3c3c3; letter-spacing:0; text-decoration:none; line-height:24px; text-align:left; float:left; }
-.c_sp_div_system dl dd select  {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #373487;}
+.c_sp_div_system dl {line-height: 34px; margin-top: 10px; margin-bottom: 0px !important;}
+.c_sp_div_system dl dt {width:300px; margin-top: 6px; margin-left: 20px; margin-right: 14px; font-weight:normal;  color:#ffffff; letter-spacing:0; text-decoration:none; line-height:24px; text-align:left; float:left; }
+.c_sp_div_system dl dd select  {width:250px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000000;}
 
-.network_fw_update input.ui-button {width:175px; padding:0px}
-.network_fw_update input.btn {width:175px; padding:0px;}
+.network_fw_update input.ui-button {width:250px; padding:0px}
+.network_fw_update input.btn {width:250px; padding:0px;}
 .network_fw_update input.half_btn {width:85px; padding:0px; }
 
 .network_system_data input.ui-button {width:175px; padding:0px}
@@ -623,7 +622,7 @@ div#cam_tamper table td {height:23px; border-bottom:1px solid #E6F0F9; text-alig
 #dialog_nand_fw_upgrade #lang_fw_location {width:100px;}
 #dialog_nand_fw_upgrade #urlname {float:left;}
 #dialog_nand_fw_upgrade .text {width:400px;}
-#dialog_nand_fw_upgrade #nand_information {border:1px solid BLACK; padding: 5px;}
+#dialog_nand_fw_upgrade #nand_information {border:1px solid BLACK; padding: 5px; color: #FFFFFF;}
 #dialog_nand_fw_upgrade dt {width: 100%; margin:10px;border:1px solid transparent;}
 #dialog_nand_fw_upgrade .nand_fw_info {width: 90%; white-space: pre-line; padding-top: 25px; margin:10px;border:1px solid transparent;}
 #dialog_nand_fw_upgrade #nand_fw_info {width: 90%; white-space: pre-line; margin:10px;border:1px solid transparent;}
@@ -651,13 +650,13 @@ div#cam_tamper table td {height:23px; border-bottom:1px solid #E6F0F9; text-alig
 
 /* System Info */
 .c_sp_div_system_info {margin-bottom:28px; margin-top: 10px;}
-.c_sp_div_system_info .txtdisp  {width:170px; height:19px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000;} /*Tin #6537 - 20171025*/
+.c_sp_div_system_info .txtdisp  {width:250px; height:19px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000;} /*Tin #6537 - 20171025*/
 
 .c_sp_cam_on { background-color : #FF0000}
 .c_sp_cam_off { }
 
 .c_sp_div_system_info dl {line-height: 34px;}
-.c_sp_div_system_info dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#c3c3c3; letter-spacing:0; text-decoration:none; line-height:24px; text-align:left; float:left; }
+.c_sp_div_system_info dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#ffffff; letter-spacing:0; text-decoration:none; line-height:24px; text-align:left; float:left; }
 .c_sp_div_system_info dl dd select  {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #373487;}
 
 /*
@@ -920,7 +919,7 @@ colgroup.cell6,th.cell6{ width:7%; }
 colgroup.cell8,th.cell8{ width:7%; }
 
 /* User Management */
-.c_sp_tb_userman {width:750px; padding:0; table-layout:fixed; margin:5px auto 5px auto; border-collapse:collapse; text-align:center; }
+.c_sp_tb_userman {width:750px; padding:0; margin:5px auto 5px auto; border-collapse:collapse; text-align:center; }
 .c_sp_tb_userman tr{height:25px;}
 .c_sp_tb_userman td.tdright {height:23px; border-bottom:1px solid #E6F0F9; background-color:#3e3e3e; font-weight:normal; color:#373487; letter-spacing:0; text-decoration:none; text-align:center;}
 .c_sp_tb_userman td.tdleft {height:23px; border-bottom:1px solid #E6F0F9; border-right:1px solid #E6F0F9; background-color:#3e3e3e; font-weight:normal; color:#373487; letter-spacing:0;}
@@ -946,17 +945,17 @@ colgroup.cell8,th.cell8{ width:7%; }
 .c_sp_tb_userman .btn_edit {width:60px;font-size: 1em !important;}
 .c_sp_tb_userman .btn_delete {width:60px; padding-left: 5px !important; font-size: 1em !important;}
 .c_sp_tb_userman input[type="text"] {width:95%;}
-.c_sp_tb_userman input[type="text"]:disabled,select:disabled {background-color: #FFF; font-size: 1em !important;} /*nguyen #10898 - 20171026*/
+.c_sp_tb_userman input[type="text"]:disabled,select:disabled {background-color: #FFF; font-size: 12px !important;} /*nguyen #10898 - 20171026*/
 .c_sp_tb_userman .ui-multiselect {opacity:1; color:#545454; font-size: 1em; margin-top: 4px}  /*nguyen #10898 - 20171026*/
 .ui-multiselect span {display:block; overflow:hidden; text-overflow:ellipsis;}
 div#user_dialog { padding: 10px 21px 21px 21px ;}
-table#userdlg {font-size: 12pt; color:#004879; }
-table#userdlg .head {padding-right:7px;display: block; font-weight: normal; text-align: left; color:  #c3c3c3; font-size: 0.8em;}  /*nguyen #10898 - 20171026*/
+table#userdlg {font-size: 12pt !important; color:#004879; }
+table#userdlg .head {padding-right:7px;display: block; font-weight: normal; text-align: left; color:  #ffffff; font-size: 12px; margin-top: 8px;}  /*nguyen #10898 - 20171026*/
 table#userdlg .cell {width: 169px;}
 table#userdlg th {width: 200px;}
 table#userdlg td#new_covert li { width: 47px; float:left;}
 table#userdlg td#new_covert li label span#covertch{ width:65%; display:inline-block; text-align:center; font-size: 0.8em}
-.passwd_rule_contents{width:530px;}
+.passwd_rule_contents{width:270px; font-size: 14px; color: #cacaca !important;}
 
 /* User Authority */
 .c_sp_tb_userautho {width:750px; padding:0; table-layout:fixed; margin:5px auto 5px auto; border-collapse:collapse;}
@@ -977,23 +976,23 @@ table#userdlg td#new_covert li label span#covertch{ width:65%; display:inline-bl
 /**************************************************************************************************************************************/
 .c_sp_div_net .iptextbox {width:36px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000;} /*Tin #6530 - 20171025*/
 /* Network DDNS */
-.c_sp_div_net_ddns {margin-bottom:28px;}
+.c_sp_div_net_ddns {margin-bottom:28px; margin-top: 20px;}
 .c_sp_div_net_ddns .lstdisp {width:170px; height:21px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black; text-align: left;} /*nguyen #10991 - 20171026*/
 .c_sp_div_net_ddns .txtnet  {width:170px; height:24px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black; ime-mode:disabled;} /*nguyen #10991 - 20171026*/
-input#port_status {width:170px;}
+input#port_status {width:217px;}
 .c_sp_div_net_ddns input[type="text"]:disabled {background-color:#ebebe4;}
 .c_sp_div_net_ddns input[type="password"]:disabled {background-color:#ebebe4;}
 .c_sp_div_net_ddns input[type="button"] {width: 200px;}
 
 .c_sp_div_net_ddns dl {line-height: 34px;}
-.c_sp_div_net_ddns dl dt {width:200px; margin-right: 14px; font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
+.c_sp_div_net_ddns dl dt {width:200px; margin-right: 14px; margin-left: 30px; font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
 .c_sp_div_net_ddns dl dd select  {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #373487;}
 
 
 
 /* Network E-Mail */
 .c_sp_div_net { margin-top: 10px; margin-bottom:28px;}
-.c_sp_div_net .lstdisp {width:170px; height:21px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000; text-align: left;}/*Tin #6530 - 20171025*/
+.c_sp_div_net .lstdisp {width:182px; height:21px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000; text-align: left;}/*Tin #6530 - 20171025*/
 .c_sp_div_net .chkdhcp {margin:2px 0 1px 0; border:1px solid #ffffff;  color: #373487; text-align: left;}
 .c_sp_div_net .txtnet {width:170px; height:19px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black; ime-mode:disabled;}
 .c_sp_div_net .txtpwd {width:170px; height:19px; margin:2px 0 1px 0;  border:1px solid #91a8c1; color:black; ime-mode:disabled;}
@@ -1002,7 +1001,7 @@ input#port_status {width:170px;}
 
 .c_sp_div_net input.ui-button {padding:0px 10px} /*Tin #6530 - 20171025*/
 .c_sp_div_net dl {line-height: 34px;}
-.c_sp_div_net dl dt {width:200px; margin-right: 14px; font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
+.c_sp_div_net dl dt {width:200px; margin-right: 14px; margin-left: 30px; font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
 .c_sp_div_net dl dd select  {width:170px; margin:2px 0 1px 55px; border:1px solid #A3BCD3;  color: #373487;}
 .c_sp_div_net input[type="text"].portsetting {width:108px; }
 
@@ -1026,7 +1025,7 @@ input#port_status {width:170px;}
 
 /* Network Security */
 .network_security_setup h1{font-weight:bold; color:#373487; font-size:14px; font-size: 1.2em;  letter-spacing:-1; font-family:Arial; text-decoration:none; line-height:24px}
-.network_security_setup h2{font-weight:bold; color:#c3c3c3; font-size:13px; background-color:#4d4d4e; font-size:14px; font-family:Arial; text-decoration:none; line-height:24px; padding:3px 3px 3px 10px;margin:5px 5px 5px 5px;}
+.network_security_setup h2{font-weight:bold; color:#c3c3c3; font-size:13px; background-color:#4d4d4e; margin-bottom: 20px !important; font-size:14px; font-family:Arial; text-decoration:none; line-height:24px; padding:3px 3px 3px 10px;margin:5px 5px 5px 5px;}
 .network_security_setup dl {line-height: 24px; padding-left: 20px}
 .network_security_setup dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; text-align:right; float:left; }
 .network_security_setup dl dd select  {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #373487;}
@@ -1043,9 +1042,9 @@ input#port_status {width:170px;}
 #dialog_filter dl dt {width:80px; margin-right: 14px; font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; text-align:right; float:left; }
 #dialog_filter dl dd select  {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #373487;}
 #dialog_filter dl dd input  {width:36px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #373487;}
-.network_security_setup dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#c3c3c3; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
+.network_security_setup dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#ffffff; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
 .network_security_setup dl dd select  {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black;}
-.network_security_setup dl dd input   {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black; text-align: center; }
+.network_security_setup dl dd input   {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black; text-align: left; }
 
 .network_security_setup table {width:700px; text-align:center;}
 .network_security_setup table th { border:1px solid #C5D5E0; background-color:#525252; font-weight:normal; color:#6CA4C8;}
@@ -1060,7 +1059,7 @@ input#port_status {width:170px;}
 #dialog_filter dl dd input  {width:36px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #373487;}
 
 /* Network RTP */
-.network_rtp_setup h1{font-weight:bold; color:#373487; font-size:14px; font-size: 1.2em;  letter-spacing:-1; font-family:Arial; text-decoration:none; line-height:24px}
+.network_rtp_setup h1{width: 100%; font-size: 16px; background: #494949; color:#FFFFFF; padding: 10px 20px; box-sizing: border-box; text-align: left;} 
 .network_rtp_setup h2{font-weight:bold; color:#C3C3C3; font-size:13px; background-color:#4D4D4E; font-size:14px; font-family:Arial; text-decoration:none; line-height:24px; padding:3px 3px 3px 10px;margin:5px 5px 5px 5px;}
 .network_rtp_setup dl {line-height: 24px; padding-left: 20PX}
 .network_rtp_setup dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#78ABCD; letter-spacing:0; text-decoration:none; text-align:right; float:left; }
@@ -1074,7 +1073,7 @@ input#port_status {width:170px;}
 .network_rtp_setup table td input[type="text"] {width:150px;}
 .network_rtp_setup table td input[type="button"] {width:60px;}
 
-.network_rtp_setup dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#C3C3C3; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
+.network_rtp_setup dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#ffffff; letter-spacing:0; text-decoration:none; text-align:left; float:left; }
 .network_rtp_setup dl dd select  {width:200px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black;}
 .network_rtp_setup dl dd input   {width:170px; margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: black; text-align: center; }
 
@@ -1082,19 +1081,19 @@ input#port_status {width:170px;}
 .network_rtp_setup table th { border:1px solid #C5D5E0; background-color:#525252; font-weight:normal; color:#6CA4C8;}
 .network_rtp_setup table tr {height:20px;}
 .network_rtp_setup table td {width:140px;white-space:nowrap; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;background-color:#3e3e3e; font-weight:normal; color:#373487; letter-spacing:0; text-decoration:none;}
-.network_rtp_setup table td input[type="text"] {width:150px;}
+.network_rtp_setup table td input[type="text"] {width:100px;}
 .network_rtp_setup table td input[type="button"] {width:60px;}
 
 /**************************************************************************************************************************************/
 /* Sensor */
 /**************************************************************************************************************************************/
-table.event {width:95%; padding:0; table-layout:fixed; margin:5px auto 5px auto; border-collapse: collapse; text-align:center;}
+table.event {width:95%; padding:0;  margin:5px auto 5px auto; border-collapse: collapse; text-align:center;}
 table.event th { height:23px; padding:0; border-bottom:1px solid #D6E0E9; border-right:1px solid #717171 !important; background-color:#3e3e3e; font-weight:normal; color:#ffffff; letter-spacing:0; text-decoration:none; text-align:center;}
 /*table.event th.small  { font-size:0.8em ;}*/
 table.event th.last {border-right:0px;}
 table.event td { white-space:nowrap; height:23px; border-left: 1px solid #757575; border-bottom:1px solid #E6F0F9; border-right:1px solid #717171 !important;background-color:#3e3e3e; font-weight:normal; color:#373487; letter-spacing:0; text-decoration:none;text-align:center;}
 table.event td.last  { border-right:0px;}
-table.event td input[type='text']  {width:90%;}
+/* table.event td input[type='text']  {width:90%;} */
 table.event select {width:90%;}
 
 table.event_sensor .ui-multiselect-horizontal li {
@@ -1142,12 +1141,15 @@ table.event_alarmout col.c4 {width:16%;}
 table.event_alarmout col.c5 {width:16%;}
 
 div.ao_sched { width: 100%; overflow-y auto;}
-div.ao_sched ul.indices { float:right; margin-right:40px; margin-bottom: 10px; color: white;}
+div.ao_sched ul.indices { float:right; margin-bottom: 10px; color: white;}
 div.ao_sched ul.indices li { float:left; margin-left:10px; }
 div.ao_sched ul.indices li.box { float:left; margin-left:30px; width:20px; }
 
 div#popupCP ul li:first-child { border-bottom:1px solid #e6f0f9;}
 div#popupCP ul li { line-height: 1.5em;}
+
+div#popupCS ul li:first-child { border-bottom:1px solid #e6f0f9;}
+div#popupCS ul li { line-height: 1.5em;}
 
 div.schedcp {float:right; margin: 15px 0px auto auto;}
 
@@ -1155,7 +1157,7 @@ div.schedcp {float:right; margin: 15px 0px auto auto;}
 .arout_color2 {background-color: #dc1215 !important;}
 .arout_color3 {background-color: #eeda41 !important;}
 
-table.aout-sched {width:100%; height:92px; padding:0; table-layout:fixed; margin:5px auto 5px auto; border-collapse: collapse; text-align:center;}
+table.aout-sched {width:100%; height:60px; padding:0; table-layout:fixed; margin:5px auto 5px auto; border-collapse: collapse; text-align:center;}
 table.aout-sched th.left {width:100px; height:23px; solid #E6F0F9; background-color:#3e3e3e; font-weight:normal; color:#373487; letter-spacing:0; text-decoration:none;  text-align:center;}
 table.aout-sched td.cell_sched {border:1px solid #ffffff; margin:20px auto auto auto;}
 table.aout-sched td.tdon {background-color:RGB(206,118,247);}
@@ -1166,7 +1168,7 @@ table.aout-sched td.tdoff {background-color:#E8E8E8;}
 #eventsetting_emailnoti input#email_list_open { width: 170px; }
 #eventsetting_emailnoti input#button_ftpserver_edit {width:170px;}
 #eventsetting_emailnoti dl {line-height:24px; margin-top: 8px !important}
-#eventsetting_emailnoti dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#c3c3c3; letter-spacing:0; text-decoration:none; line-height:24px; text-align:right; float:left;}
+#eventsetting_emailnoti dl dt {width:300px; margin-right: 14px; font-weight:normal;  color:#ffffff; letter-spacing:0; text-decoration:none; line-height:24px; text-align:right; float:left;}
 #eventsetting_emailnoti dl dd select  {margin:2px 0 1px 0; border:1px solid #A3BCD3;  color: #000000;}
 #fragment-ftp #btn_help {width:100px;}
 div#dialog_ftpserver dl dt {width : 150px; line-height: 21px; float:left; text-align:right; padding-right: 7px;}
@@ -1178,11 +1180,11 @@ div#dialog_email #email_noti { margin-top: 10px; min-width:350px;}
 div#dialog_email dl dt { width: 100px; line-height: 21px; float:left; text-align:right; padding-right: 7px;}
 div#dialog_email dl dd { margin-bottom: 13px; }
 div#dialog_email dl dd * { margin-right: 7px; height: 21px;}
-div#dialog_email dl dd #email_list { width:218px; }
+div#dialog_email dl dd #email_list { width:263px; }
 div#dialog_email #email_add {width:60px; height: 21px}
 
-table#sched_table {border-collapse: collapse; margin-top: 10px !important}
-table#sched_table th {height:23px; border-bottom: 1px solid #d6e0e9; border-right: 1px solid #717171; background-color: #e6f0f9; padding-left: 10px !important; padding-right: 10px !important; font-weight: normal; color: #6ca4c8; letter-spacing:0px; text-decoration: none; text-align: center; font-size: 0.8em;}
+table#sched_table {border-collapse: collapse; margin-top: 10px !important; width:100%;}
+table#sched_table th {height:23px; border-left: 1px solid #717171; border-bottom: 1px solid #717171; border-right: 1px solid #717171; padding-left: 10px !important; padding-right: 10px !important; font-weight: normal; color: #cacaca; letter-spacing:0px; text-decoration: none; text-align: center; font-size: 0.8em;}
 table#sched_table td {height:23px; border-bottom: 1px solid #e6f0f9; border-right: 1px solid #e6f0f9; background-color:#3e3e3e; font-weight: normal; color: #373487; letter-spacing: 0px; text-decoration: none; text-align: center;}
 
 #dialog_email #email_noti #email_button {text-align:center;}
@@ -1210,7 +1212,7 @@ div#dialog_ftpserver dl dd {margin-bottom: 5px; margin-right: 7px;}
 
 /* Sensor Alarm Input */
 table.event_sensor {width:750px;}
-table.event_sensor thead th {font-size: 0.8em; 1em;}
+table.event_sensor thead th {font-size: 1em;}
 table.event_sensor col.col1 {width:8%;}
 table.event_sensor col.col2 {width:8%;}
 table.event_sensor col.col3 {width:8%;}
@@ -1227,9 +1229,9 @@ table.event_sensor col.col12{width: 6%;}
 /* Sensor Motion Sensor */
 .c_sp_tb_sensor_mosensorh  {width:650px; height: 23px; padding:0; table-layout:fixed; margin: 5px auto 5px auto; border-collapse: collapse; text-align:center;}
 
-table.event_motion {width:750px;}
+table.event_motion {width:714px;}
 
-table.event_motion thead th {font-size: 0.8em; 1em;}
+table.event_motion thead th {font-size: 1em; width: 130px;}
 
 table.event_motion col.col1 {width:10%;}
 table.event_motion col.col2 {width:20%;}
@@ -1266,7 +1268,7 @@ table.event_vca col.col8 {width:8%;}
 
 
 /* Sensor System Event */
-table.event_system { width: 95%; }
+table.event_system { width: 100%; }
 
 table.event_system thead th { font-size: 1em;}
 
@@ -1278,8 +1280,8 @@ table.event_system col.col5 {width:8%;}
 table.event_system col.col6 {width:8%;}
 table.event_system col.col7 {width:8%;}
 
-table.event_system td.left { text-align:left; }
-table.event_system td.left select  { width: auto; float: right;}
+table.event_system td.left { text-align:left; padding-left: 6px;}
+table.event_system td.left select  { width: auto; float: right; margin-right: 16px; width: 150px;}
 
 /* PTZ Preset Dialog Widget */
 table.event input.ptzact-button { width:65%; margin-left: 8px;}
@@ -1351,7 +1353,7 @@ option.red    ,select.red   {background-color:red;}
 #camsetting_ptz  > div  h2,
 #c_sp_div_contents > form > div  h2,
 #camsetting_image > div > div  h2,
-#camsetting_cam  > div > div  h2 {
+#camsetting_cam  > div > div  h2{
   width:100% !important; /*Tin #6539 - 20171025*/  /*nguyen #10995 - 20171026*/
   background: #494949;
   color: #fff;
@@ -1370,7 +1372,10 @@ option.red    ,select.red   {background-color:red;}
 #c_sp_div_contents #c_g_div_button,
 #camsetting_cam #c_g_div_button,
 #camsetting_image  #c_g_div_button {
-  margin-right: 33px;
+  margin-right: 25px;
+}
+#motion-tab > #c_g_div_button{
+  margin-right: -7px;
 }
 /*END :: i3 custom layout*/
 
@@ -1431,8 +1436,16 @@ table  tbody tr td{
   border-right: 1px solid #717171 !important;
   border-bottom: 1px solid #717171 !important;
   border-left: 1px solid #717171 !important;
+  border-top: 1px solid #717171 !important;
   color: #cacaca !important;
-  padding : 3px 0px;
+  padding : 4px 0px;
+}
+
+#userdlg tbody tr td {
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-top: none !important;
 }
 
 table.sensitivity thead tr th ,
@@ -1449,10 +1462,10 @@ table  tbody tr td:last-child {
 table  tbody tr td input {
   background: #eee;
   padding: 3px 2px;
-  font-size: 1em !important; /*nguyen #10898 - 20171026*/
+  font-size: 12px !important; /*nguyen #10898 - 20171026*/
 }
 table  tbody tr td input[type="text"] {
-  border: none;
+  /* border: none; */
   /* width: 192px; */ /*nguyen #10898 - 20171026*/
   width: 90%;
 }
@@ -1464,7 +1477,7 @@ table  tbody tr td input[type="text"] {
 /*Start :: Custom tab*/
 .ui-tabs {
   background: #3c3c3c !important;
-  border: 1px solid #717171;
+  /* border: 1px solid #717171; */
   margin-bottom: 20px;
 }
 
@@ -1474,7 +1487,7 @@ table  tbody tr td input[type="text"] {
 .ui-tabs .ui-tabs-nav .ui-state-default  {
   border-radius: 0px;
   border: none;
-  background: #242424;
+  background: #333333;
 }
 .ui-tabs .ui-tabs-nav .ui-state-default  a {
   color: #fff;
@@ -1544,7 +1557,7 @@ table  tbody tr td input[type="text"] {
 
 
 /*Tin #6530 - 20171025*/
-input[type="button"]#confirm_conflict  {width:180px}
+input[type="button"]#confirm_conflict  {width:143px}
 
 /*height of box*/
 .c_sp_tb_cam_analog > tbody > tr > td {
@@ -1631,9 +1644,9 @@ div#fragment-email > dl > dd,
 #systemid {
   width: 95%;
 }
-#c_sp_div_contents > div > h2 {
+/* #c_sp_div_contents > div > h2 {
   margin-bottom: 15px;
-}
+} */
 #c_sp_div_contents > div > table.c_sp_tb_system_dev {
   border-top:1px solid #717171 !important;
 }
@@ -1650,7 +1663,6 @@ div#fragment-email > dl > dd,
 }
 #automatic_config > div > ul#auto {
   width: 730px;
-  padding-left: 305px;
 }
 #automatic_config > div > ul > li > #hd_priority {
   width:269px;
@@ -1710,8 +1722,8 @@ div.c_sp_div_storage_diskop > ul > li > div.timelimit_complex, /*Tin #11214 - 20
   left:283.5px;
   margin-top: 5px;
 }
-#setupFileUpload {width:421px;margin-top:20px;}
-#systemsetting_info > div > div.c_sp_div_system > dl.systemid {margin-bottom:0px !important;}
+#setupFileUpload {width:421px;}
+#systemsetting_info > div > div.c_sp_div_system > dl.systemid {margin-bottom:-4px !important;}
 #systemsetting_info > div > div.c_sp_div_system > dl:nth-child(2) {margin-top: 0px !important;}
 /*Tin #11202 - 20171101*/
 /*NETWORK - DDNS */
@@ -1730,10 +1742,11 @@ div.c_sp_div_net > dl > dd > #maxtx,
 div.c_sp_div_net > dl > dd > #port_status {width: 220px;}
 /*NETWORK - SECURITY */
 #system_id,
-div.for_ipx.rtsp_service > dl > dd > #srtsp_method {width: 166px;}
+div.for_ipx.rtsp_service > dl > dd > #srtsp_method {width: 170px;}
 /*Tin #11200 - 20171101*/
 /*EVENT - ALARM - ON/OFF SCHEDULE */
 div#popupCP > ul > li > label > input[type="checkbox"]{margin-right: 5px;}
+div#popupCS > ul > li > label > input[type="checkbox"]{margin-right: 5px;}
 div.ui-dialog-buttonset > button:nth-child(1){width: 110px;}
 div.container > dl > dd > #button_ftpserver_edit,
 div.container > dl > dd > #ftp_dir_mode,
@@ -1987,9 +2000,7 @@ div[aria-labelledby="ui-dialog-title-dialog_help"] {left: 380px !important; widt
 .ui-dialog .ui-dialog-titlebar {
     background: #222222;
 }
-.ui-widget-content{
-    color: #c3c3c3 !important;
-}
+
 #dhcp{
     margin-right: 20px;
 }
@@ -2005,9 +2016,7 @@ div[aria-labelledby="ui-dialog-title-dialog_help"] {left: 380px !important; widt
 .ui-widget-header{
     background-color: #222222 !important;
 }
-.ui-widget-content{
-    background: #222222;
-}
+
 .ui-multiselect-menu{
     background: #343434 !important;
 }
@@ -2023,3 +2032,232 @@ thead email_sched_time{
 #email_freq, #ftp_fname_mode, #ftp_dir_mode {
     width: 170px;
 } 
+
+.analog_type_for_5hg_model .c_sp_tb_cam_analogtype_5hd tbody tr td .add_width_90_per {
+  width: 100%;
+}
+
+.c_sp_div_frame.c_sp_div_frame_dot #c_g_div_button{
+  margin-right: -7px !important;
+}
+
+#netsetting_rtp #c_sp_div_contents  #c_g_div_button{
+  margin-right: 12px !important;
+}
+
+#system_id{
+  width: 250px;
+}
+#reboot_bt{
+  width: 250px;
+}
+
+#lang_systemdata{
+  display: none;
+}
+
+.c_sp_div_system.network_fw_update dd:last-child {
+  display: none;
+}
+
+#sensor_table tr th:nth-child(6), #sensor_table th:nth-child(8),#sensor_table th:nth-child(9),#sensor_table td:nth-child(6),#sensor_table td:nth-child(8),#sensor_table td:nth-child(9){
+  display: none;
+}
+
+
+#event_tab_sched {
+  margin-top: 20px;
+}
+
+h2#h2_OnoffSchedule{
+  margin-top: 60px;
+}
+
+#event_tab_alarmout .c_sp_div_sensor .event.alarmout{
+  width: 100%;
+}
+
+#lang_day{
+  color: white;
+}
+
+#cp_button[value="COPY SCHEDULE TO"]{
+  margin-bottom: 40px;
+}
+
+#eventsetting_motion_sensor th:nth-child(4), #eventsetting_motion_sensor th:nth-child(6), #eventsetting_motion_sensor td:nth-child(4), #eventsetting_motion_sensor td:nth-child(6){
+  display: none;
+}
+
+#eventsetting_video_loss th:nth-child(4), #eventsetting_video_loss td:nth-child(4){
+  display: none;
+}
+
+#fragment-disk th:nth-child(4), #fragment-disk td:nth-child(4){
+  display: none;
+}
+
+
+#fragment-sys th:nth-child(4), #fragment-sys td:nth-child(4){
+  display: none;
+}
+
+#fragment-net th:nth-child(4), #fragment-net td:nth-child(4),#fragment-net th:nth-child(5), #fragment-net td:nth-child(5),#fragment-net th:nth-child(6), #fragment-net td:nth-child(6){
+  display: none;
+}
+
+#image_tab_stream tbody tr:nth-child(4), #image_tab_stream tbody tr:nth-child(8){
+  display: none;
+}
+
+#setupFileUpload{
+  width: 250px;
+  height: 27px;
+}
+
+#image_tab_camtitle #c_g_div_msg{
+  background: none !important;
+}
+
+
+#fps_default0_0{
+  width: 159px;
+}
+
+#btn_copyto{
+  margin: 16px 0;
+  text-align: right;
+}
+
+
+#image_tabs ul, #motion-tab ul, #privmask-tab > ul:first-child, #tab ul, #event_tabs ul{
+  background: #333333 !important;
+}
+
+
+#lang_Sensitivity{
+  font-weight: 600;
+  color: white;
+  font-size: 14px;
+}
+
+
+#tab-area .sensitivity th, #tab-area .sensitivity td{
+  background: none !important;
+}
+
+#sysdbUploadOk{
+  width: 100px;
+  margin-left: 6px;
+}
+
+#systemsetting_info > #c_g_div_button{
+  margin-top: 24px;
+}
+
+#divnetaudio dd:nth-child(2){
+  margin-top: 14px;
+}
+
+.ui-widget-content{
+  background: #3c3c3c !important;
+  color: #FFFFFF !important;
+}
+
+
+.ip_line1, .ip_line2, .ip_line3, .ip_line4, .ip_line5, .ip_line6, .ip_line7, .ip_line8, .ip_line9, 
+.ddns_line1, .ddns_line2, .ddns_line3, .ddns_line4, .rtp_line2, .rtp_line3, 
+.email_line1, .email_line2, .email_line3, .email_line4, .email_line5, .email_line6, .email_line7, 
+.dt_line1, .dt_line2, .dt_line3, .dt_line4, .dt_line5, .dt_line6, .dt_line7, .dt_line8, .dt_line9, .dt_line10,
+.email_no_line4, .email_no_line3, .email_no_line2, .email_no_line1, .ftp_line5, .ftp_line4, .ftp_line3, .ftp_line2,
+.ftp_line1, .secu_line4, .secu_line3, .secu_line2, .secu_line1, .ip_fil_line1 {
+  margin-bottom: 12px;
+}
+
+#security1{
+  width: 172px;
+}
+
+#event_tab_alarmout thead tr:nth-child(2){
+  display: none;
+}
+
+#eventsetting_motion_sensor .event.event_motion{
+  width: 750px;
+}
+
+#image_tab_stream table input[type="text"]{
+  width: 64%;
+}
+#motion-tab, #image_tabs, #privmask-tab, #tab, #event_tabs {
+  border-radius: 0px;
+}
+
+#passwd_current, #passwd_new, #confirm_new, #email_new, #noti_new {
+  width: 261px;
+}
+
+#grpname_new, #noti_new{
+  height: 26px;
+}
+
+#grpname_new{
+  font-size: 12px !important;
+}
+
+#lblcovert_new_all > span{
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+#usrsetting_usrmange .c_sp_tb_userman tr th:nth-child(3), #usrsetting_usrmange .c_sp_tb_userman tr td:nth-child(3) {
+  display: none;
+}
+
+#userdlg tbody tr:nth-child(13){
+  display: none;
+}
+
+#usrsetting_usrauthority .c_sp_tb_userautho tr:nth-child(7){
+  display: none;
+}
+
+#tab_multicast .event.event_motion.network_rtp tr th:nth-child(4), #tab_multicast .event.event_motion.network_rtp tr th:nth-child(7){
+  display: none;
+}
+
+#tab_multicast .event.event_motion.network_rtp tbody tr td:nth-child(4), #tab_multicast .event.event_motion.network_rtp tbody tr td:nth-child(7){
+  display: none;
+}
+
+.ftp_line5{
+  display: none;
+}
+
+#tab ul{
+  display: none;
+}
+
+#camsetting_ptz .cam_ptz tr th:nth-child(2), #camsetting_ptz .cam_ptz tbody tr td:nth-child(2){
+  display: none;
+}
+
+#image_tab_camtitle .c_sp_tb_cam_cam4 tr:nth-child(1){
+  display: none;
+}
+
+#fragment-sys .event.event_system thead tr:nth-child(3){
+  display: none;
+}
+
+#fragment-sys .event.event_system tbody tr:nth-child(2){
+  display: none;
+}
+
+#nvrrestart{
+  width: 250px;
+}
+
+#lang_fac_message{
+  white-space: pre-wrap;
+}
